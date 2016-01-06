@@ -16,7 +16,7 @@ dependencies:
 
 test:
   override:
-    - true
+    - echo "no tests!"
 
 ## Customize deployment commands
 deployment:
