@@ -14,6 +14,10 @@ dependencies:
   cache_directories:
     - /home/ubuntu/.rvm/gems/ruby-2.1.2
 
+test:
+  override:
+    - true
+
 ## Customize deployment commands
 deployment:
   production:
