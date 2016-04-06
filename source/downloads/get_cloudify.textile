@@ -24,7 +24,7 @@ cat: User Guide
 					<div class="row">
 						<div class="span12">
 						<div class="aligncenter">
-				<h1><i class="icon-download"></i>&nbsp;&nbsp;<strong><font color="">Cloudify 3.3.1 Downloads</font></strong></h1></div>	
+				<h1><i class="icon-download"></i>&nbsp;&nbsp;<strong><font color="">Cloudify 3.3.1ダウンロード</font></strong></h1></div>	
 			</div>
 		</div>			
 	</div>
@@ -37,13 +37,13 @@ cat: User Guide
 	
 		
 			<div class="span7"><div class="testimonial-grey" >					
-					<h2><strong>Get Cloudify CLI</strong></h2> <a name="releasenotes"></a>
+					<h2><strong>Cloudify CLIを得る</strong></h2> <a name="releasenotes"></a>
 					<p><img src="/img/Logo-BlueWebNoGS.png" style="float: right; margin: 0px 0px 0px 5px; display: inline;" width="150"></p>
 												
 
 							<p>&#160;</p>
 							<div class="alignjustify">
-							<p>Install the Cloudify CLI to deploy and orchestrate your application blueprints across clouds.</p></div>	
+							<p>Cloudify CLIをインストールしてクラウド全体で展開、統合する青写真（設計図）を作ります。</p></div>	
 							
 							
 
@@ -81,13 +81,13 @@ cat: User Guide
 						<div class="span5">
 						<div class="testimonial-grey" >
 						
-						<h3><strong>Cloudify Manager</strong></h3>
+						<h3><strong>Cloudifyマネージャー</strong></h3>
 						<div class="aligncenter"><img src="/img/console.png" width="150" style="float: right; margin: 0px 0px 0px 10px; display: inline;"></div>
-							<p><font color="#2c4a67">The Cloudify Manager provides enhanced capabilities with:</font></p>
-							<p>WebUI Management, APIs, Blueprint/Deployment Catalog, Monitoring, Agents & More.</p>	
+							<p><font color="#2c4a67">Cloudifyマネージャーは強力な機能を提供しています。:</font></p>
+							<p>WebUI、多くのAPI、青写真と展開カタログ、監視、エージェントほか</p>	
 
 						
-							<p><img src="/img/logo.png" style="float: left; margin: 0px 10px 0px 0px; display: inline;" width="30"><a href="/downloads/install-cloudify-manager.html">Install Cloudify Manager</a></p>
+							<p><img src="/img/logo.png" style="float: left; margin: 0px 10px 0px 0px; display: inline;" width="30"><a href="/downloads/install-cloudify-manager.html">Cloudifyマネージャーの起動</a></p>
 							<p><img src="/img/aws14.gif" style="float: left; margin: 0px 10px 0px 0px; display: inline;" width="30"><a href="#" data-btn-type="Amazon AMI Download 0.0.1" class="downloadAmi" data-btn-id="Amazon AMI Download 0.0.1" data-btn-split="4" data-thanks-page="thank_you_aws" onclick="javascript: _gaq.push(['_trackEvent', 'Product Download', 'Amazon AMI Download 0.0.1', 'Amazon AMI Download 0.0.1']);"> Amazon Shared AMI</a> (Only on EC2-Classic)</p>
 							<p><img src="/img/vagrant-logo2.png" style="float: left; margin: 0px 10px 0px 0px; display: inline;" width="30"><a href="http://repository.cloudifysource.org/org/cloudify3/3.3.1/sp-RELEASE/Vagrantfile" data-btn-type="Vagrant Trial Download 3.3.1" class="downloadVagrant" data-btn-split="7" data-btn-id="Vagrant Trial Download 3.3.1" data-thanks-page="thank_you_vagrant" onclick="javascript: _gaq.push(['_trackEvent', 'Product Download', 'Vagrant Trial Download 3.3.1', 'Vagrant Trial Download 3.3.1 build 310 - Vagrant File']);">Vagrant Box</a></p>
 								
@@ -110,15 +110,15 @@ cat: User Guide
 								
 									
 									<p class="name"> 
-										<strong>Cloudify Composer</strong>
+										<strong>Coudify作成ツール</strong>
 									</p>
 									<div class="aligncenter">																				
 									<img src="/img/Composer.png" width="180"></div>
 									<p>&#160;</p>	
-									<span class="info">Simple web user interface to design and model application blueprints.</span><br/> 
+									<span class="info">シンプルなWeb UIで簡単に青写真の作成ができます。</span><br/> 
 									<p>&#160;</p>
 									<div class="aligncenter">
-									<a id="btnComposer" class="btn btn-blue  dropdown-toggle btn-large" href="#" data-btn-split="4" data-btn-type="Composer Download 3.3.0" data-btn-id="Composer Download 3.3.0" data-thanks-page="thank_you_composer" onClick="javascript: _gaq.push(['_trackEvent', 'Product Download', 'Cloudify Composer Download', 'Cloudify Composer Download 3.3.0']);" download disabled="disabled">Download Composer</a><br>
+									<a id="btnComposer" class="btn btn-blue  dropdown-toggle btn-large" href="#" data-btn-split="4" data-btn-type="Composer Download 3.3.0" data-btn-id="Composer Download 3.3.0" data-thanks-page="thank_you_composer" onClick="javascript: _gaq.push(['_trackEvent', 'Product Download', 'Cloudify Composer Download', 'Cloudify Composer Download 3.3.0']);" download disabled="disabled">今すぐダウンロード Coudify作成ツール</a><br>
 										<!--style="margin: 0px 0px 0px 0px; display: inline;">-->
 									<p><strong><font style="font-size:10px;">
 										<input type="checkbox" style="display: inline-block;margin:0;" >
@@ -134,7 +134,7 @@ cat: User Guide
 
 
 									<h4 class="name">
-										<strong>All Packages</strong>
+										<strong>すべてのパッケージ</strong>
 									</h4>
 									<p>&#160;</p>
 											
