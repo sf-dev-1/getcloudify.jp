@@ -34,6 +34,24 @@ $(document).ready(function() {
 		
 	})();
 
+	
+	//$('#da-slider').cslider();
+	$('#da-slider').cslider({
+
+	current		: 0, 	
+	// index of current slide
+	
+	bgincrement	: 50,	
+	// increment the background position 
+	// (parallax effect) when sliding
+	
+	autoplay	: true,
+	// slideshow on / off
+	
+	interval	: 8000  
+	// time between transitions
+	
+});
 
 	//for highlight current pages
 	//http://docs.shopify.com/support/configuration/store-customization/how-do-i-style-active-link-with-javascript-and-css
@@ -292,11 +310,11 @@ $(document).ready(function() {
 
 		
 	//Navi hover
-	$('ul.nav li.dropdown').hover(function () {
+	/*$('ul.nav li.dropdown').hover(function () {
 		$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
 	}, function () {
 		$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
-	});
+	});*/
 	
 	// tooltip
 	$('.social-network li a, .options_box .color a').tooltip();
