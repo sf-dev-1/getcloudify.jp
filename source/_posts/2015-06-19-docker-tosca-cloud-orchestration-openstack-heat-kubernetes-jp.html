@@ -1,0 +1,141 @@
+---
+layout: blogpost
+title: DockerのためのシンプルなTOSCAオーケストレーション
+lang: jp
+categories:
+    - jp
+image: nati.png
+author: Nati Shalom
+tags: 
+ - NFV
+ - Network Automation
+ - OpenStack
+ - Cloud Orchestration
+---
+<notextile>
+
+
+<h2>この記事は、もともとは2015年2月に<a href="http://www.infoq.com/articles/tosca-docker-orchestration"><strong>InfoQ.com</strong></a>で公開されたものです。</h2>
+<p>&nbsp;</p>
+<h2>Dockerオーケストレーションの現状</h2>
+<p>この記事は、<a href="http://getcloudify.org/2014/11/23/docker-containers-docker-cloud-management.html">Dockerオーケストレーション</a>が何を意味し、なぜ必要かということに関する記事に続くものです。基本前提となるのは、オーケストレーションは、アプリケーションと階層の依存関係に基づいてコンテナ作成のタイミングを調整する役割を果たすだけでなく、コンテナが相互に通信してランタイムプロパティを渡すことを可能にするということです。この記事では、この件について、さらに掘り下げてみたいと思います。</p>
+<p>コンテナによって展開のポータブルユニットを表すのは目新しいことではありません。しかし、アプリケーションは多くの場合において複数のコンテナから作成されるため、たいていは、もっと複雑なことになります。それだけでなく、Dockerイメージのクラスタのセットアップは非常に煩わしい場合があります。なぜならば、コンテナが他のコンテナを認識するようにし、コンテナの相互通信に必要な細々した情報を公開する必要があるからです。特に、コンテナが同じホスト上にない場合、それは些細なことではありません。例えば、Dockerコンテナを利用してMongoクラスタまたはCassandraクラスタをセットアップするとします。その場合、どのポートを公開するのか、どの程度の容量を実装するのといった、クラスタ化されたコンテナ環境のセットアップに伴う諸々のことについて知る必要があります。</p>
+<p>&nbsp;</p>
+<p><em><strong>Cloudify ‐ TOSCAベースのピュアプレイDockerオーケストレータ ‐ を今すぐ入手&nbsp;&nbsp; </strong></em>+Go</p>
+<p>&nbsp;</p>
+<p>これらのシナリオを要因として、何らかのオーケストレータを求める気運が高まっています。Dockerコンテナとマイクロサービスに関する<a href="http://opensource.com/business/14/12/containers-microservices-and-orchestrating-whole-symphony">優れた記事</a>や、<a href="http://www.infoq.com/news/2014/12/microservices-docker">InfoQに関する記事</a>で述べられているように、コンテナオーケストレータの種類は急速に増加しています。以下に、このカテゴリで比較的有名なものをいくつか紹介します (もちろん、これらはほんの一部です)。</p>
+<ul>
+<li><a href="http://kubernetes.io/">Kubernetes</a>：Dockerコンテナのオーケストレーション用にGoogleが提供しているオープンソースツールであり、特にマイクロサービスのオーケストレーションに関連するものを対象としています。</li>
+<li><a href="https://github.com/coreos/fleet">Fleet</a>：CoreOSにおけるコンテナのインストールを対象とするCoreOSのDockerオーケストレーションです。</li>
+<li>SwarmおよびCompose：Dockerが<a href="http://blog.docker.com/2014/12/announcing-docker-machine-swarm-and-compose-for-orchestrating-distributed-apps/">最近発表した</a>Dockerオーケストレーションサービスであり、Dockerクラスタを実行するためのものです。</li>
+</ul>
+<p>これらの他に、CoreOSは、最近、別のコンテナフォーマットである<a href="https://coreos.com/blog/rocket/">Rocket</a>を発表しました。これがオーケストレーションの状況にどのような影響を与えるのか考えてみるのは面白いのではないでしょうか。</p>
+<h2>ピュアプレイオーケストレーションの仕様の必要性</h2>
+<p>標準パッケージユニットとしてのソフトウェアコンテナの役割を説明するためによく使用されるのが輸送用コンテナです。輸送用コンテナは、標準化のメリットを表す絶好の例です。標準化されたコンテナがなければ、商品配送業界は今日とはまったく異なるものになっていたでしょう。輸送用コンテナと同様、コンテナの形、サイズ、および部品の実際の仕様が単一のコンテナサービス業者に属するものになるとは思えません。おそらく、複数のコンテナサービス業者が存在することになるでしょう。CoreOSが最近発表したRocketは、そのような流れを示す最初の兆しに過ぎません。</p>
+<h2>頼りになるTOSCA</h2>
+<p><a href="https://en.wikipedia.org/wiki/OASIS_TOSCA">TOSCA</a> (Topology Orchestration Specification for Cloud Applications) は、標準規格団体であるOASISの規格です (OASISは、XML規格も規定しています)。<a href="http://getcloudify.org/2014/12/21/oasis-TOSCA-cloud-openstack-heat-orchestration-spec.html">TOSCAオーケストレーション</a>は、既に十分な成熟段階に達しています。開発に関する実績があり、また、開発の速さは証明済みです。そのため、多くの組織がその成果に期待し、貢献しています。今や、TOSCAは、2回目の大幅な改訂を終え、数年間にわたる実績をもち、商用ソースとオープンソースの両方に関するプロジェクト (Juju、Cloudify、IBM Cloud Orchestrator、OpenStack Heatなど) で影響力を増しています。また、大手の電気通信ベンダー (Alcatel-Lucent、Huawei、Ciscoなど) でも採用されています。</p>
+<p>TOSCAは標準規格団体 (OASIS) が後押ししています。そのことが、TOSCAを、さまざまなクラウド環境とコンテナプロバイダーにわたってポータブルな標準コンテナオーケストレーション仕様を定義する上での優れたプラットフォームにしています。</p>
+<p>この記事では、現在のDocker API仕様をポータブルなTOSCA仕様にマップすることは、極めて簡単であり、ひいては、Dockerベースの複雑なアプリケーショントポロジを宣言的に記述するための直感的な手段を提供するということを示す例を紹介したいと思います。</p>
+<h2>Docker用のTOSCAブループリント</h2>
+<p>初期のマッピングプロセスを容易にするため、私たちは<a href="https://github.com/docker/docker-py">docker</a><a href="https://github.com/docker/docker-py">-py</a><a href="https://github.com/docker/docker-py"> python client</a>を、以降に記載する提案の根拠として使用しました。</p>
+<p>以下は、大規模なアプリケーショントポロジの一部であるDockerベースのMongoDBサーバーを記述するTOSCAブループリントのスニペットです。このマッピングは、最新の<a href="http://docs.oasis-open.org/tosca/TOSCA-Simple-Profile-YAML/v1.0/TOSCA-Simple-Profile-YAML-v1.0.html">TOSCA仕様</a>に従い、YAMLベースであり、TOSCAを使用する<a href="http://getcloudify.org/guide/3.2/plugin-docker.html">Dockerコンテナ</a>のための推奨モデリングツールです。</p>
+<p>&nbsp;</p>
+<p>このTOSCAフォーマットは、他の種類の依存性インジェクションと非常に似ており、大きな違いは、YAMLベースであることと、より一層オーケストレーションドメインに特化していることです。そのようなものとして、アプリケーションサービスの運用的側面を表すライフサイクル、関係性、ポリシー、およびプランの定義も含んでいます。</p>
+<h2>TOSCAを使用する簡易なDockerのサンプルの実行</h2>
+<p>TOSCAベースのオーケストレーションがどのように機能するか感じをつかむため、<a href="http://getcloudify.org/">Cloudify</a>で提供している簡易なTOSCAコマンドラインパーサーを使用してみましょう。</p>
+<p>Node.jsを基盤とする<a href="https://github.com/cloudify-cosmo/cloudify-nodecellar-docker-example">NodeCellarのアプリケーション</a>をWebアプリとして使用し、そのためのデータベースとしてMongoDBを使用しました。以下の図に示すように、これらのサービスは、それぞれ、独立したDockerコンテナで実行されます。</p>
+<p>また、<a href="https://github.com/cloudify-cosmo/cloudify-nodecellar-docker-example/blob/master/blueprint/docker-singlehost-blueprint.yaml">NodeCellar TOSCAブループリント</a>によってDockerHubからのDockerイメージのダウンロードを処理し、後で、それらのイメージを以降のインストールやアンインストールに再利用します。そのようにすることで、アプリケーション全体をわずか10秒程度で作成できるようになります。</p>
+<p>&nbsp;</p>
+<h2>サンプル実行のためのステップバイステップガイド</h2>
+<p>このサンプルは、基礎となるオペレーティングシステムとしてUbuntu (Precise) 12.04を使用してテストされました。このサンプルによって、2つのブループリント実装環境がもたらされます。1つは<a href="https://github.com/cloudify-cosmo/cloudify-nodecellar-docker-example/blob/master/blueprint/docker-singlehost-blueprint.yaml">シングルホスト</a>の展開用であり、もう1つは<a href="https://github.com/cloudify-cosmo/cloudify-nodecellar-docker-example/blob/master/blueprint/docker-openstack-blueprint.yaml">OpenStack上でのクラスタ展開</a>用です。わかりやすくするため、この記事では、シングルホストの場合のみを例として取り上げます。</p>
+<p>サンプルの実行手順</p>
+<table>
+<tbody>
+<tr>
+<td width="165">
+<p><strong>環境のセットアップ</strong></p>
+</td>
+<td width="285">&nbsp;</td>
+</tr>
+<tr>
+<td width="165">
+<p>Dockerのインストール</p>
+</td>
+<td width="285">
+<p>&gt; curl -sSL https://get.docker.com/ubuntu/ | sudo sh<br /> 次のコマンドを使用してインストールをチェックします。<br /> &gt; sudo docker ps</p>
+</td>
+</tr>
+<tr>
+<td width="165">
+<p>Cloudifyのインストール</p>
+</td>
+<td width="285">
+<p>&gt; pip install cloudify<br /> 次のコマンドを使用してインストールをチェックします。<br /> &gt; cfy --version<br /> vagrant-boxを使用して事前構成済みのCloudifyイメージを入手するか、<a href="http://getcloudify.org/guide/3.1/quickstart.html">ここ</a>で説明しているように、他のインストールオプションを使用することもできます。</p>
+</td>
+</tr>
+<tr>
+<td width="165">
+<p><strong>TOSCA/Dockerのサンプルのセットアップ</strong></p>
+</td>
+<td width="285">&nbsp;</td>
+</tr>
+<tr>
+<td width="165">
+<p>サンプルのダウンロード</p>
+</td>
+<td width="285">
+<p><a href="https://github.com/cloudify-cosmo/cloudify-nodecellar-docker-example/archive/3.1.zip">このリンク</a>からサンプルをダウンロードし、解凍します。</p>
+</td>
+</tr>
+<tr>
+<td width="165">
+<p>サンプルのブループリントファイルをポイントするように現行のTOSCAブループリントを設定します。</p>
+</td>
+<td width="285">
+<p>&gt;cfy local init -p blueprint/docker-singlehost-blueprint.yaml -i blueprint/cfy-local-inputs.json --install-plugins</p>
+</td>
+</tr>
+<tr>
+<td width="165">
+<p>インストレーションワークフローの実行</p>
+</td>
+<td width="285">
+<p>&gt;sudo cfy local execute -w install<br /> このコマンドは、直前のステップで設定したブループリント上でインストレーションワークフローを実行します。<br /> インストレーションワークフローおよびアンインストレーションワークフローは、あらゆるブループリントで利用できる黙示的なワークフローです。インストレーションワークフローでは、TOSCA依存関係グラフに従って、関係性および依存関係の定義で指定されている順序に基づいて各ノードのライフサイクルコマンドが実行されます。アンインストレーションワークフローでは同様のことが逆順で実行されます。<br /> このブループリントでは、初回実行時にDockerイメージをダウンロード (この処理には数分かかることがあります) してから、2つのDockerインスタンス (1つはmongod用で、もう1つはスとNode.js用)　を実行し&nbsp;、アプリケーションとデータベースをそれらのインスタンスでそれぞれインストールします。</p>
+</td>
+</tr>
+<tr>
+<td width="165">
+<p>出力内容の確認</p>
+</td>
+<td width="285">
+<p>&gt; cfy local outputs<br /> NodeCellarアプリケーションのホストポートが出力されます。</p>
+</td>
+</tr>
+<tr>
+<td width="165">
+<p>アプリケーションの起動</p>
+</td>
+<td width="285">
+<p>直前のステップで確認したホスト名とポートを使用して、以下のリンクをブラウザーで開きます。<br /> <a href="http://localhost:8080/">http</a><a href="http://localhost:8080/">:</a><a href="http://localhost:8080/">//&lt;出力されたホスト名&gt;:</a><span style="text-decoration: underline;">&lt;出力されたポート&gt;</span><br /> vagrant-boxで実行する場合は、host_ip属性のデフォルト値を「localhost」からVagrant VMのホストIPに変更しなければなりません。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>まとめ</h2>
+<p>現時点におけるITインフラストラクチャの進化の速さを考慮すると、引き続き、複数のコンテナプロバイダーとオーケストレーションエンジンが混在することになる可能性が高いであろうと想定する必要があります。それを踏まえれば、コンテナクラスタを定義および管理する方法の仕様が複数のコンテナプロバイダーやオーケストレーションプロバイダーによって標準化され、サポートされるようになることは、まさに道理にかなっています。そうでなければ、ポータブルな「輸送用」ユニットとしてのコンテナの全体的な将来性は疑わしくなります。</p>
+<p>さらに、多くの組織において、すべてのワークロードがコンテナ内で実行されると予想することは非現実的であると考える必要があります。さまざまなワークロードが実行されることが想定される可能性が高いでしょう。ワークロードの種類ごとに別々のオーケストレーションエンジンを用意するとなると、たちまち、運用面で最悪の事態を招くことになると思われます。これが、各種のコンテナだけでなく、Chef、Puppet、SaltStackなどをベースとするコンテナ化されていないサービスを含む混合環境もサポートできる比較的に依存性の低いオーケストレーションエンジンを確保する、もう1つの理由です。</p>
+<p>TOSCAは、現在、オーケストレーションに関し、その仕様面で非常に進んでおり、そのため、コンテナの標準ブループリント定義の理想的な候補となっています。</p>
+<p>標準のオーケストレーションフォーマットがあるということだけがTOSCAを選択する理由ではありません。現在のコンテナベースのオーケストレータのほとんどは、ほぼ、初期のセットアップとインストール段階のみを扱います。しかし、TOSCAは、それらとは異なり、監視、追加ワークフロー (継続的な展開、スケールアウト、修復)、追加ワークフローのいくつかが自動的に起動されるようにするためのポリシーなど、展開後の側面を含めて、アプリケーションサイクル全体をカバーします。したがって、よりホリスティックなオーケストレーション定義を実現します。</p>
+<p>以上の演習から、標準のTOSCA YAMLを使用してDockerワークロードのオーケストレーションを非常に簡単に行えることが理解いただけたのではないかと思います。この記事をコミュニティにおけるディスカッションおよびブレーンストーミングのための良いたたき台にしていただければ幸いです。</p>
+<p>&nbsp;</p>
+<p><a href="http://getcloudify.org/2015/06/11/orchestration-docker-cloud-automation-openstack-heat-tosca-kubernetes.html">前の記事</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://getcloudify.org/2015/06/24/vagrant-packer-etc.html">次の記事</a></p>
+<p>&nbsp;</p>
+<p>関連記事</p>
+<p><a href="http://getcloudify.org/2015/10/21/configuration-management-chef-puppet-ansible-emc-dell-vmware-orchestration.html#at_pco=cfd-1.0&amp;at_ab=-&amp;at_pos=0&amp;at_tot=3&amp;at_si=565b3d1929adb4ca">The Disruption Cycle - A Dime a Dozen. | Cloudify</a></p>
+<p><a href="http://getcloudify.org/2014/03/23/openstack_cloud_orchestration.html#at_pco=cfd-1.0&amp;at_ab=-&amp;at_pos=1&amp;at_tot=3&amp;at_si=565b3d1929adb4ca">Why You SHOULD Want to Use OpenStack | Cloudify</a></p>
+<p><a href="http://getcloudify.org/2014/10/30/Docker-cloud-orchestration-configuration-management.html#at_pco=cfd-1.0&amp;at_ab=-&amp;at_pos=2&amp;at_tot=3&amp;at_si=565b3d1929adb4ca">How Docker is Changing Configuration Management | Cloudify</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;<a href="#_msoanchor_1">[K.1]</a>"run two docker instances, one for the mongod instance and the other for the nodejs instance"was translated as "run two docker instances, one is for mongod and the other is Node.js".</p>
+
+</notextile>
