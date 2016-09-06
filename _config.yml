@@ -18,3 +18,6 @@ github_integrations_search_query: "-integration+in:name+fork:true+user:cloudify-
 default_examples_version: "master"
 default_examples_version_fallback: "master"
 examples_cors_proxy: "https://d95fn1u5c9.execute-api.us-west-2.amazonaws.com/prod/proxy"
+
+gems:
+  - jekyll-seo-tag
