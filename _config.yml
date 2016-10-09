@@ -8,6 +8,7 @@ encoding: UTF-8
 exclude: ["node_modules"]
 paginate: 5
 paginate_path: "blog/page:num"
+description: With Cloudify you can deploy the same application in your own data center or on the cloud of your choice
 
 latest_cloudify_version: 3.2
 
