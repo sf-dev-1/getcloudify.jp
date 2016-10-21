@@ -1,6 +1,6 @@
 ---
 layout: bt_about
-title: Configuration Management | Ansible | Puppet | Chef
+title: 構成管理 | Ansible | Puppet | Chef
 category: cloudify player
 ---
 <section id="inner-headline">
@@ -9,7 +9,7 @@ category: cloudify player
 			<div class="span12">
 				<ul class="breadcrumb">
 					<li><a href="/"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-					<li class="active">Configuration Management</li>
+					<li class="active">構成管理</li>
 				</ul>
 				<br/>
 			</div>
@@ -102,14 +102,14 @@ category: cloudify player
 				<section id="content">
 				<div class="container">
 				<div class="row">
-					<h1>Orchestration for <strong>Configuration Management Tools</strong></h1>
-					<p>Cloudify provides an application orchestration service with built-in monitoring and logging for deploying multi-tier applications through a single command. Built with a pluggable architecture, Cloudify enables you to plug-in any tool chain making it possible for you to extend your application management through the full lifecycle, including post-deployment - with healing, scale-out and scale-in as needed, as well as the ability to define custom policies. Cloudify also provides real-time metrics about your deployment.</p>
+					<h1>O<strong>構成管理ツール</strong>のためのオーケストレーション</h1>
+					<p>Cloudifyは、コマンドひとつで複数階層のアプリケーションをデプロイするためのモニタリングとロギングを備えたアプリケーションオーケストレーションサービスを提供します。プラグイン可能なアーキテクチャーで構築されたCloudifyでは、あらゆるツールチェーンにプラグインできるため、デプロイ後に適宜必要となる回復やスケールアウト、スケールイン、さらにカスタムポリシーの定義能力も含め、ライフサイクル全体を完全に網羅したアプリケーション管理が可能です。Cloudifyはデプロイメントに関するリアルタイムメトリクスも提供します。</p>
 					
 						<br>
 					<div class="aligncenter">
 				<img src="http://getcloudify.org/img/cloudify_pluggability.jpg">
 
-<p>Cloudify has out of the box integrations with leading open source tools - from Puppet to Chef and Ansible, and many more (see our <a href="http://getcloudify.org/examples/home.html" target="_blank">examples hub</a>), and you can easily write a plugin if it doesn't exist yet.																
+<p>Cloudifyは出荷時点でPuppetやChef、Ansible、その他にも多数の主要なオープンソースツールと統合できるようになっており(<a href="http://getcloudify.org/examples/home.html" target="_blank">サンプルハブ</a>を参照)、まだプラグインがなければ自分で簡単に書くことができます。																
 
 {% include downloadbuttons.html %}
 
@@ -163,39 +163,39 @@ category: cloudify player
 				<div class="container">
 				<div class="row colOdd">
 				<div class="row">
-					<div class="span12"><h2><strong>Integrating with CM Tooling</strong></h2>
-				<p>Configuration management tools are mature and utilized by many organizations for rapid provisioning and deployment of applications at scale. However, CM tools still require a lot of manual processes such as VM provisioning in pre-deployment, monitoring, healing, and scaling. Moreover, CM tools hardwire many of the components without intelligent observation of the application topology.</p>
-				<p>This is where Cloudify comes in to orchestrate and manage the entire lifecycle of your application.</p>
+					<div class="span12"><h2><strong>構成管理ツールとの統合</strong></h2>
+				<p>構成管理ツールは成熟しており、多くの企業で、アプリケーションの迅速なプロビジョニングとより大規模なデプロイメントに活用されています。しかしながら、構成管理ツールはまだデプロイ前のVMプロビジョニングや、モニタリング、回復、スケーリングといった人手による作業を必要とします。また構成管理ツールは、多数のコンポーネントを、アプリケーショントポロジーのインテリジェントな観測のないまま組み込んでいます。</p>
+				<p>これが、アプリケーションライフルサイクル全体のオーケストレーションと管理に、Cloudifyが有効である理由です。</p>
 				
 				</div></div>
 
 				<div class="row">
-					<div class="span12"><h2><strong>The Orchestration Process</strong></h2>
-					<p>The basic flow of how Cloudify orchestration works with Ansible or Puppet or Chef is as follows:</p>
+					<div class="span12"><h2><strong>オーケストレーションのプロセス</strong></h2>
+					<p>以下は、AnsibleやPuppet、Chefを対象としたCloudifyのオーケストレーションの基本フローです:</p>
 
 				
 			<img style="float: left; display: inline" src="{{ site.baseurl }}/img/autoscale2.png" width="450" align="left" /> 
-			<p><b>Step 1: Prepare and upload your blueprint</b></p>
+			<p><b>ステップ1: ブループリントを用意してアップロードする</b></p>
 
-			<p>Cloudify provisions the server, creates the VMs, and installs the agents</p>
+			<p>CloudifyがサーバーのプロビジョニングとVM作成、エージェントをインストールする</p>
 
-			<p><b>Step 2: Install your Application</b></p>
+			<p><b>ステップ2: アプリケーションをインストールする</b></p>
 
-			<p>Integrate with Chef, Puppet, Ansible, Docker, SaltStack to install the various application services</p>
+			<p>ChefやPuppet、Ansible、Docker、SaltStackと統合して多彩なアプリケーションサービスをインストールする</p>
 
-			<p><b>Step 3: Manage Your Application</b></p>
+			<p><b>ステップ3: アプリケーションを管理する</b></p>
 
-			<p>Add monitoring, logging, alerts, execute workflow for updates, patches, etc.</p>
+			<p>モニタリングやロギング、アラートを追加し、アップデートやパッチなどのワークフローの実行する</p>
 
-			<p><b>Step 4: Add Auto-Healing, Auto-Scaling</b><b></b></p>
+			<p><b>ステップ4: 自動回復と自動スケーリングを追加する</b><b></b></p>
 
-			<p>Continuously detect and correct failure, add more capacity </p>
+			<p>継続的にエラーを検知して修正し、キャパシティを追加する </p>
 
 							
 				</div></div>
 
 				<div class="row">
-					<div class="span12 aligncenter"><h2><span class="highlight"><strong>Deployment features</strong></span></h2>
+					<div class="span12 aligncenter"><h2><span class="highlight"><strong>デプロイメント機能</strong></span></h2>
 				</div></div>
 				
 				<div class="row">
@@ -208,8 +208,8 @@ category: cloudify player
 							</div>
 							<div class="text">
 								<br>
-								<h4><strong>Install Server and Agent</strong></h4>
-								<p>Cloudify takes the application topology as input and will provision a machine based on this specific application topology. Cloudify will allow you to install a CM client per machine. It will also provision a server or simply link all the services to an existing server. Once the environment is set, it will allow you to invoke remote commands directly from the Cloudify management console, enabling you to easily install new modules/cookbooks, or manage your deployment, as needed.</p>
+								<h4><strong>サーバーとエージェントのインストール</strong></h4>
+								<p>Cloudifyはアプリケーショントポロジーをインプットとして捉え、当該アプリケーショントポロジーを基にマシンをプロビジョニングします。Cloudifyでは構成管理クライアントをマシンごとにインストールできます。サーバーをプロビジョニングしたり、全サービスを既存のサーバーにリンクするのみといった場合もあります。環境が設定されると、Cloudify制御コンソールからリモートコマンドを直接呼び出し、必要に応じて簡単に新規のモジュール/クックブックをインストールしたり、デプロイメントを管理したりすることができます。</p>
 
 							</div>
 						</div>
@@ -223,8 +223,8 @@ category: cloudify player
 							</div>
 							<div class="text">
 							<br>
-								<h4><strong>Support Existing CM Recipes/Agents</strong></h4>
-								<p>Many configuration management users already have invested in creating agents/recipes and configuration. Cloudify was designed to be set as a service on top of your existing environment, and therefore it will allow you to leverage your existing investment rather than forcing you to reconfigure the entire system.
+								<h4><strong>既存の構成管理レシピ/エージェントのサポート</strong></h4>
+								<p>構成管理ユーザーの多くは、既にエージェント/レシピと構成の作成に投資してきています。Cloudifyは既存の環境上にサービスとして設定されるように設計されているため、システム全体の再構成を強いるよりは既存の環境を活用できるようにします。
 								</p>
 
 							</div>
@@ -239,8 +239,8 @@ category: cloudify player
 							</div>
 							<div class="text">
 								<br>
-								<h4><strong>Application Lifecycle Management</strong></h4>
-								<p>Deploying multi-tier applications includes multiple services such as web containers and databases that are interdependent. Cloudify will allow you to make sure that these services will start in the right order. It includes specific hooks to monitor the lifecycle of each application and inject the reference for each dependent service. In the example below, it will inject the reference to the database to each web container and it will inject each reference of the web container into the load balancer service.
+								<h4><strong>アプリケーションライフサイクルの管理</strong></h4>
+								<p>複数の層からなるアプリケーションのデプロイメントには、相互に依存するウェブコンテナやデータベースといった複数のサービスが含まれます。Cloudifyなら、これらのサービスを正しい順序で開始させることができます。各アプリケーションのライフサイクルを監視し、各サービスへのリファレンスを注入するフックを内包します。以下の例では、データベースへのレファレンスを各ウェブコンテナに注入し、ウェブコンテナの各レファレンスをロードバランサーサービスに注入しています。
 								</p>
 
 							</div>
@@ -254,7 +254,7 @@ category: cloudify player
 				<div class="row colEven">
 
 					<div class="span12"><div class="">
-					<h2><span class=""><strong>Post Deployment Features</strong></span></h2></div></div>
+					<h2><span class=""><strong>デプロイ後の機能</strong></span></h2></div></div>
 
 
 					<div class="container">
@@ -268,9 +268,9 @@ category: cloudify player
 							</div>
 							<div class="text">
 								<br>
-								<h4><strong>Monitoring and Logging</strong></h4>
-								<p>One of the challenges in any deployment is to keep the configuration management and monitoring systems in sync.</p>
-								<p>Cloudify glues the two together by providing built-in monitoring that is automatically updated as part of the deployment process. In addition, Cloudify’s monitoring fills a void that other monitoring systems don’t cover well, as they were designed to monitor applications only after they have been deployed, while the monitoring of the deployment and setup process is also needed. Cloudify also provides built-in logging and alerting, as well as custom metrics to measure specific key performance indicators of each of the managed services.</p>
+								<h4><strong>モニタリングとロギング</strong></h4>
+								<p>デプロイメントにおける課題のひとつは、構成管理システムと監視システムの同期を維持することです。</p>
+								<p>Cloudifyではデプロイメントプロセスの一環として自動的にアップデートされる監視機能を搭載することで両システムを結んでいます。また、Cloudifyによるモニタリングでは、他の監視システムではあまりカバーされていない空白を埋めることができます。デプロイメントとセットアッププロセスも監視が必要なところを、他の監視システムはデプロイ後だけを監視するように設計されているためです。加えてCloudifyでは、ロギングとアラートを搭載し、各マネージドサービスに特有のKPI測定に必要なカスタムメトリクスも提供します。</p>
 
 							</div>
 						</div>
@@ -284,8 +284,10 @@ category: cloudify player
 							</div>
 							<div class="text">
 							<br>
-								<h4><strong>Remote Execution</strong></h4>
-								<p>One of the key features for DevOps users is to be able to interact with their existing deployed services and push new updates. Cloudify adds a <a href="http://getcloudify.org/2015/03/19/ssh-script-fabric-remote-commands-execution-deployment-automation.html" target="_blank">remote execution command</a> that allows you invoke remote shell and CM tool commands as part of a DevOps deployment process. The remote execution feature will allow you to simply set the invocation on a specific instance or for all of the the instances of a particular service.</p>
+								<h4><strong>遠隔実行</strong></h4>
+								<p>DevOpsユーザーにとって重要な特長のひとつは、既存のデプロイ済みのサービスとやりとりし、新規アップデートをプッシュできる機能です。Cloudifyでは、DevOpsデプロイメントプロセスの一環として、<a href="http://getcloudify.org/2015/03/19/ssh-script-fabric-remote-commands-execution-deployment-automation.html" target="_blank">リモートシェルや構成管理ツールのコマンド</a>を呼び出せる遠隔実行コマンドを追加しています。この遠隔実行機能により、特定のサービスの単一またはすべてのインスタンスにこの呼び出しを簡単に設定できます。
+
+</p>
 
 							</div>
 						</div>
@@ -298,8 +300,8 @@ category: cloudify player
 							</div>
 							</div>
 								<div class="span8">
-								<h4><strong>Cloud Portability</strong></h4>
-								<p>Cloudify was designed to work with multiple private or public cloud environments, as well as a traditional data center. Chef, Puppet, and Ansible users (as well as other CM users) can use Cloudify to take advantage of this feature to abstract their application from the underlying environment, and in this way, use the same set of cookbooks/modules and Cloudify services across different clouds without any changes.</p>
+								<h4><strong>クラウドのポータビリティ</strong></h4>
+								<p>Cloudifyは、複数のプライベートおよびパブリッククラウド環境だけでなく従来のデータセンターにも対応するように設計されました。ChefやPuppet、Ansibleのユーザーは（他の構成管理ユーザーも）、この機能を活用してその環境のアプリケーションを要約することにより、同一のクックブック/モジュールとCloudifyサービスのセットを様々なクラウドでそのまま利用することができます。</p>
 							</div>
 							</div>
 
@@ -310,14 +312,14 @@ category: cloudify player
 							</div>
 							</div>
 								<div class="span8">
-								<h4><strong>Advanced Orchestration</strong></h4>
-								<p>Cloudify comes with an orchestration service that allows you to automate complex processes by interacting with the individual services and executing the right command.</p>
-								<p>It comes with a set of built-in processes for handling:</p>
+								<h4><strong>高度なオーケストレーション</strong></h4>
+								<p>Cloudifyは、各サービスと交流し、適切なコマンドを実行することで複雑なプロセスを自動化できるオーケストレーションサービスを備えています。</p>
+								<p>以下を扱う内蔵プロセスのセットが備わっています:</p>
 								<ul>
-									<li>Self-Healing</li>
-									<li>Auto-Scaling</li>
-									<li>Disaster Recovery Automation</li>
-									<li>DevOps Policies (Such as pushing updates)</li>
+									<li>自己回復</li>
+									<li>自動スケーリング</li>
+									<li>障害復旧の自動化</li>
+									<li>DevOpsポリシー（アップデートのプッシュなど）</li>
 								</ul>
 							</div>
 							</div>
