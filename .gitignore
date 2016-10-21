@@ -12,3 +12,5 @@ node_modules
 _site/*
 source/_posts/2015-05-22-openstack-cloud-tosca-network-orchestration-automation-heat-summit-vancouver.html
 /.project
+vendor/bundler
+
