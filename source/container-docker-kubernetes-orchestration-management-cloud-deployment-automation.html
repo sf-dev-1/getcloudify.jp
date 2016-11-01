@@ -1,0 +1,140 @@
+---
+layout: bt_about
+title: Container Orchestration | Docker Orchestration | Kubernetes Orchestration | Container Management
+category: cloud orchestration cloud automation
+---
+<section id="inner-headline">
+    <div class="container">
+        <div class="row"> 
+            <div class="span12">
+                <ul class="breadcrumb">
+                    <li><a href="/"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+                    <li class="active">Cloudifyにおけるコンテナ</li>
+                </ul>
+                <br/>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="span6 no-margin">
+                        <h1><strong>Cloudifyによるコンテナのオーケストレーションと管理</strong></h1>
+                        <p>Linuxのコンテナはその軽い特性と直下のリソースを効率よく共有する能力故に、瞬く間にクラウドコンピューティング業界で大きな役割を果たすようになりました。コンテナのアーキテクチャーもまた、OpenStackやVMwareといった様々なクラウド間でのアプリケーションのポータビリティを簡素化する手段をもたらします。</p>
+                        <p>コンテナに未だに困難が付きまとうのは異種環境の中であり、そこではコンテナは単なる考慮すべき一要素に過ぎません。</p>
+                        <p>ピュアプレイのオープンソースの原則に沿って構築され、TOSCA標準に準拠するCloudifyなら、コンテナとその中のマイクロサービスのデプロイメントを自動化し、ライフサイクルを管理できます。Cloudifyでユーザーはアプリケーションとコンテナの完全なスタックをどのようなインフラストラクチャーにもデプロイできるのです。</p>
+                        <br/>
+                        
+                        <div class="aligncenter"><a class="btn btn-theme btn-large btn-rounded" id="downloadBtnInner" href="{{ site.baseurl }}/downloads/get_cloudify.html"><i class="icon-download"></i>  Cloudifyをダウンロードする</a></div>
+                        &nbsp; &nbsp;
+                    
+                        </div>
+                    <div class="span6">
+                        <!-- start flexslider -->
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                
+                                <img src="img/containerscloudify.png" alt="" />
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end flexslider -->
+                    </div>
+                </div>
+                </section>
+
+                <hr>
+                
+                <div class="aligncenter">
+                    <font style="font-weight: bold; color: grey" size="5" face="Baskerville Old Face"><em>ブログ記事でCloudifyが<a href="http://getcloudify.org/2016/05/10/leading-openstack-container-revolution-cloud-nfv-open-source-kubernetes-tosca-orchestration.html" target="_blank">コンテナ管理に革命を起こす</a>理由を読む</em></font>
+                </div>
+                
+
+                <hr/>  
+
+                <section id="content">
+                <div class="container">
+        
+                <div class="row">
+                <div class="span12">
+                
+                    
+                    <h1><strong>Kubernetesのオーケストレーション</strong></h1>
+                    <p>コンテナの利用が広がるにつれ、当然ながらコンテナを管理する必要性が出てきました。KubernetesはおそらくDockerコンテナ管理の中で最もよく知られています。Kubernetesはコンテナ特有のアーキテクチャーに合わせて構築された非常に個性的なシステムですが、それでも異種環境に対してはオーケストレーションのソリューションが必要です。Cloudifyはハイブリッド環境のいかなるインフラストラクチャー上でも、KubernetesやDocker、その他のコンテナも管理を自動化することができます。</p>
+                    <div class="aligncenter"><img src="http://getcloudify.org/img/blog/kubernetes-cloudify.png"></div><br>
+                    <p>Cloudifyでは <a href="http://getcloudify.org/examples/home.html#?repo=58148713" target="_blank">Kubernetesのプラグイン</a> を利用できますが多少の制限があります。このプラグインはCloudify 3.4 GAで正式リリースされる予定です。以下のビデオでは、CloudifyによるKubernetesのオーケストレーションのしくみを説明します。</p><br>
+                    
+                    <div class="aligncenter"><a class="hover-wrap fancybox fancybox.iframe" data-fancybox-group="gallery" title="Orchestrating Kubernetes in a Hybrid Environment on OpenStack" href="http://www.youtube.com/embed/eT92TBKTUEk?enablejsapi=1&amp;wmode=opaque"><img src="/img/cloudify_kub_hybrid-play.png" style="display: inline; margin-right:10px;" width="600px"></a></div>
+
+                </div>
+                </div>
+                </div>
+                </section>  
+                
+                                <section id="content">
+                <div class="container">
+        
+                <div class="row">
+                <div class="span12">                    
+                    <h1><strong>Dockerのオーケストレーション</strong></h1>
+                    <p>Dockerはそのオープンな性質と軽さ、安全性から、コンテナの世界で急速に人気が高まっています。Dockerのコンテナは、自己完結型のアプリケーションコンポーネントをあらゆる基礎となるインフラストラクチャーに、迅速かつ確実にデプロイするために作られました。しかしながら、アプリケーションはその構造上、複数の階層を持つことが多いため、各コンテナには適切な管理を必要とする依存性が生じます。</p>
+                    <p>この問題に答えるのがCloudifyです。私たちのDockerオーケストレーションでは、コンテナ作成のタイミングを依存性順とし、さらに必要なランタイム属性をコンテナ間で伝達、送信させるための必要な構成をすべて処理することで解決します。</p>
+                    <div class="aligncenter"><img src="/img/docker-plugin.png" width="800px"></div><br>
+                    <p>TOSCAに準拠したCloudifyのYAMLベースのブループリントを利用すれば、インフラストラクチャーやミドルウェア層、その上のアプリケーションレイヤーも含め、非常に複雑なトポロジーを記述することができます。</p>
+                    <p>Cloudifyは<a href="https://github.com/cloudify-cosmo/cloudify-docker-plugin">内臓Dockerプラグイン</a> と適合するタイプを備えるため、ユーザーはDockerコンテナをあらゆるトポロジーの一部として利用できます。これによりDockerベースの大規模なシステムでも本格的なオーケストレーションと自動化の手段がもたらされます。</p>
+                    <br><hr>
+                    <h2>詳細</h2>
+                    <p>DockerとKubernetesに関する詳細は、当社のブログ記事でご確認ください:</p>
+                    <p><strong>Kubernetes</strong></p>
+                    <ul>
+                    <li><a href="http://getcloudify.org/2015/08/26/kubernetes-docker-images-microservices-container-architecture-management-orchestration-tools.html" target="_blank">Kubernetesに対応するCloudify — ベアメタルのコンテナ管理とオーケストレーション</a></li>
+                    <li><a href="http://getcloudify.org/2015/10/26/openstack-tokyo-summit-kubernetes-cloudify-tosca-nfv-orchestration-microservices.html" target="_blank">Kubernetesに対応するCloudify — 統合の改善</a></li>
+                    <li><a href="http://getcloudify.org/2015/11/01/openstack-tokyo-summit-kubernetes-cloudify-tosca-nfv-orchestration-microservices.html" target="_blank">OpenStackでのKubernetesのオーケストレーション</a></li>
+                    <li><a href="http://getcloudify.org/2016/03/24/openstack-scaling-kubernetes-microservices-linux-containers-cloud-TOSCA-orchestration.html" target="_blank">TOSCAオーケストレーションを利用した OpenStack でのKubernetesのマイクロサービスのスケーリング（1/2）</a></li>
+                    <li><a href="http://getcloudify.org/2016/04/04/scaling-kubernetes-microservices-openstack-TOSCA-orchestration-cloud-open-source.html" target="_blank">TOSCAオーケストレーションを利用した OpenStack でのKubernetesのマイクロサービスのスケーリング（2/2）</a></li>
+                    </ul>
+                    <p><strong>Docker</strong></p>
+                    <ul>
+                    <li><a href="http://getcloudify.org/2015/06/19/docker-tosca-cloud-orchestration-openstack-heat-kubernetes.html" target="_blank">DockerのためのシンプルなTOSCAオーケストレーション</a></li>
+                    <li><a href="http://getcloudify.org/2015/06/11/orchestration-docker-cloud-automation-openstack-heat-tosca-kubernetes.html" target="_blank">オーケストレーションツール総覧 — Docker Swarm とKubernetes、TerraFormとTOSCA/Cloudify、Heatの比較</a></li>
+                    <li><a href="http://getcloudify.org/2015/04/17/open-source-docker-orchestration-automation-management-workflow-engine-software.html" target="_blank">ワークフロー自動化（2）— Dockerのオーケストレーションと管理</a></li>
+                    <li><a href="http://getcloudify.org/2015/01/19/tosca-cloud-monitoring-dashboard-docker-container.html" target="_blank">クラウドをデスクトップに 、Dockerと整理されたクラウドモニタリングの詳細/</a></li>
+                    <li><a href="http://getcloudify.org/2014/12/14/TOSCA-docker-container-orchestration-microservices-architecture-kubernetes.html" target="_blank">Dockerもコンテナもマイクロサービスも　—　全体のオーケストレーション</a></li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+                </section>  
+
+
+     <div class="clear"></div>  
+     
+    
+    
+
+        <section id="bottom">
+            <div class="container">
+
+        <div class="row">
+        <div class="span2"></div>
+        <div class="span8">
+        <div class="aligncenter">
+            
+                <h2><strong>今すぐCloudifyをダウンロード、またはプラグインを分岐する</sup></strong></h2>
+                        <br/>
+                            <a class="btn btn-large btn-theme btn-rounded" id="downloadBtnInner" href="/downloads/get_cloudify.html"><i class="icon-download"></i>  今すぐダウンロード</a>
+                            &nbsp; &nbsp;
+                            <a class="btn btn-green btn-large btn-rounded" id="" href="/examples/home.html"><i class="fa fa-code-fork"></i>  コンテナのプラグイン</a>
+                            <br/>
+                            </br>
+                            </div>
+                        
+                        </div>
+                        <div class="span2"></div>
+                    </div>
+                    </div>
+                    </section>
+                    <div class="clear"></div>
