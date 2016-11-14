@@ -1,6 +1,6 @@
 ---
 layout: bt_about
-title: About Us
+title: Cloudifyについて
 category: About Us
 ---
 
@@ -11,58 +11,59 @@ category: About Us
 
 <strong>
 
-h1. About Cloudify
+h1. Cloudifyについて
 
 </strong>
 
-<p>Cloudify is an open source TOSCA based cloud orchestration software platform (like Amazon’s OpsWorks).  It automates the process of installation, deployment and also post-deployment such as monitoring, remediation, and auto-scaling of your application stack.</p>
+<p>Cloudifyは、オープンソースでTOSCAベースのクラウドオーケストレーションソフトウェアプラットフォーム（アマゾンのOpsWorksのようなもの）です。アプリケーションスタックのインストールやデプロイメントのプロセスに加えて、モニタリングや改善、自動スケーリングといったデプロイ後のプロセスも自動化します。</p>
 
 <strong>
 
-h2. How it actually works
+h2. 実際の動作
 
 </strong>
 
-<p>Cloudify acts as a "software operator" that follows similar steps to the way a human operator works, but in a fully automated fashion. To get to this level of automation Cloudify receives input that can be understood by software configuration files, known as blueprints that describe how the application interacts with the data center through APIs to execute the desired blueprint configurations.</p>
-<p>Below are the typical steps for deploying and managing an application with Cloudify.</p>
+<p>Cloudifyは人間のオペレーターの作業に似た手順を踏む「ソフトウェアのオペレーター」として動作しますが、すべて自動化されています。このレベルの自動化を達成するため、Cloudifyはブループリントとして知られるソフトウェア構成ファイルで解釈される、インプットを受領します。そのブループリントは、望ましいブループリントの構成を実行するための、アプリケーションとデータセンター間のAPIを介したインタラクションを定義しています。</p>
+<p>以下はCloudifyを利用して、アプリケーションをデプロイおよび管理する際の一般的な手順です:</p>
 
-* Describe your application in a TOSCA-based blueprint: The recipe describes your application blueprint which includes the details required to install and manage the application, such as the components of your applications and their dependencies, and the location of your binaries, installation and monitoring configuration.
+* TOSCAベースのブループリントでアプリケーションを描写する: レシピでは、アプリケーションのコンポーネントとそれらの依存性、バイナリの場所や、インストレーション、モニタリングの構成といった、アプリケーションのインストールと管理に必要な詳細を含むアプリケーションのブループリントを記述します。
  <br />
-* Execute the plan:  Cloudify uses the blueprint as input that describes the deployment plan and is responsible for executing it on a variety of cloud environments just like a human operator works. 
+* 計画の実行: Cloudifyはブループリントを、デプロイメント計画を記述し様々なクラウド環境上で人間のオペレーターのようにその計画を実行するための、インプットとして利用します。 
  <br />
 
-<p>A typical deployment includes the following steps:</p>
+<p>一般的にデプロイメントでは以下の手順を踏みます:</p>
 
 
-## Setup the infrastructure: Setup network configurations (routers, security groups, public IPs), setup the compute and storage resources, and assign them to the relevant network and storage device.
-## Assign roles to each machine and install the relevant application tiers on these machines through SSH or shell scripts, or even by calling configuration management tools such as Chef or Puppet.
-## Start the relevant services in the right order based on their dependencies.
-## Wire in the application monitoring and logging.
+## インフラストラクチャーを設定する: ネットワーク構成（ルーター、セキュリティグループ、パブリックIP）を設定し、コンピュートとストレージのリソースも設定、続いてそれらを関連するネットワークとストレージ機器に割り当てる。
+## 各マシンに役割を割り当て、SSHかシェルスクリプト、またはChefやPuppetのような構成管理ツールを呼び出して、それらのマシン上に関連するアプリケーション層をインストールする。
+関連サービスをそれらの依存性に基づいた正しい順序で開始する。
 
+## 関連サービスをそれらの依存性に基づいた正しい順序で開始する。
+## アプリケーションのモニタリングとロギングを関連付ける。
 
-* Manage the application: Once the application is deployed, Cloudify will continuously monitor the application to see that it meets the expected SLA, and will take corrective actions in case of a breach in the SLA, whether in the case of failure or scaling events.<br/>
+* アプリケーションを管理する: アプリケーションがデプロイされると、Cloudifyはアプリケーションが期待されるSLAを満たすか確認するために継続的に監視し、障害かスケーリングイベントかに関わらずSLA違反の場合には是正策を取る。<br/>
 
 <strong>
 
-h2. Typical Applications that Run on Cloudify
+h2. Cloudify上で動作する一般的なアプリケーション
 
 </strong>
 
 
-<p>Cloudify best fits multi-tier applications deployments that are hard to manage through manual processes. Some such applications include:
+<p>Cloudifyは、マニュアルのプロセスでは管理しにくい複数階層のアプリケーションデプロイメントに最もよく適しています。そのようなアプリケーションには以下が挙げられます:
 </p>
 
-* Multi-Tier JEE applications (WebLogic, WebSphere, Tomcat, JBoss)
-* Big Data applications
-* Network services (NFV)
+* 複数階層のJEEアプリケーション（WebLogic、WebSphere、Tomcat、JBoss）
+* ビッグデータのアプリケーション
+* ネットワークサービス（NFV）
 
 <strong>
 
-h2. Supported Cloud Platforms
+h2. サポート対象のクラウドプラットフォーム
 
 </strong>
 
-<p>Cloudify is tightly integrated with OpenStack, and at the same time, include support for other cloud platforms to allow interoperability with all cloud platforms. A selected list of popular cloud platforms that are supported by Cloudify is provided below:
+<p>CloudifyはOpenStackと緊密に統合されていますが、同時に他のプラットフォームもサポートしており、あらゆるクラウドプラットフォームとの相互操作性を実現しています。以下は、Cloudifyがサポートする、ポピュラーなクラウドプラットフォームの一覧です:
 </p>
 
 * OpenStack 
@@ -73,29 +74,29 @@ h2. Supported Cloud Platforms
 
 <strong>
 
-h2. Support for Non-Cloud Platforms (Bare Metal)
+h2. 非クラウドプラットフォームのサポート（ベアメタル）
 
 </strong>
 
-<p>Cloudify also supports non-cloud environments by plugging in to a predefined pool of machines and managing the application deployment within the boundaries of that pool.  This configuration is popular for organizations that don't have a cloud-based environment or are in a transition to the cloud. It is also popular for applications that are performance and I/O intensive such as big data applications and Network functions.</p>
+<p>Cloudifyは、マシンの既定プールにプラグインし、そのプールのバウンダリーの範囲でアプリケーションデプロイメントを管理することで、非クラウド環境もサポートしています。この構成はクラウドベースの環境を持たない企業や、クラウドに移行中の企業の間で人気があります。ビッグデータアプリケーションやネットワーク機能のような、I/Oインテンシブでパフォーマンスの集約的なアプリケーションへの対策としても人気です。</p>
 
 <strong>
 
-h2. Support for Configuration Management Frameworks
+h2. 構成管理フレームワークのサポート
 
 </strong>
 
-<p>Many organizations today use configuration management tools such as Chef or Puppet to describe their application setup. Cloudify integrates with these frameworks and adds the orchestration capabilities on top of these frameworks. In this way, Chef or Puppet users can add dependency management, monitoring, auto-healing, and auto-scaling into their existing environment.</p>
+<p>今日では多くの企業が、アプリケーション設定の記述にChefやPuppetなどの構成管理ツールを利用しています。Cloudifyはこれらのフレームワークと統合し、その上にオーケストレーション機能を追加します。ChefやPuppetのユーザーはこの方法で依存性管理やモニタリング、自動回復、自動スケーリングを既存の環境に追加することができます。</p>
 
 <strong>
 
-h2. How Cloudify Relates to Other Industry Standards and Technology Movements<br/>
+h2. Cloudifyと他の業界標準やテクノロジー動向との関係性<br/>
 
 h3. TOSCA 
 
 </strong>
 
-<p>TOSCA (Topology and Orchestration Specification for Cloud Applications) by the Oasis Foundation is used by Cloudify as the standard specification for its blueprints.</p>
+<p>Cloudifyでは、Oasis FoundationによるTOSCA（クラウドアプリケーションのためのトポロジーとオーケストレーションの仕様）をブループリントの標準仕様として用いています。</p>
 
 <strong>
 
@@ -103,8 +104,9 @@ h3. DevOps
 
 </strong>
 
-<p>DevOps is a model for automating the software release process from the development stage to production. 
-Orchestration engines such as Cloudify help to automate the continuous delivery or deployment process by orchestrating the steps required to package the new software, ship it to the right nodes, execute the relevant tests, and more.</p>
+<p>DevOpsは、開発段階から制作段階までのソフトウェアリリースプロセスを自動化するモデルです。
+Cloudifyなどのオーケストレーションエンジンは、新規ソフトウェアをパッケージ化し、適切なノードに送り、関連するテストなどを実行するために必要な手順をオーケストレートすることにより、継続的なデリバリーとデプロイメントのプロセスの自動化に貢献します。
+</p>
 
 <strong>
 
@@ -112,11 +114,11 @@ h3. NFV
 
 </strong>
 
-<p>Network Function Virtualization is an initiative driven by Telecom carriers to transform their existing appliance-based infrastructure into a cloud-based infrastructure. An orchestration engine such as Cloudify plays a critical role in this transition by automating the process provisioning of virtualized network functions into the carrier infrastructure and ensuring that those network services meet their desired SLA. Cloudify was specifically designed to manage network functions through the support of agentless deployment, bare metal support, built-in network orchestration, federated deployment and much more.</p>
+<p>NFV（ネットワーク機能仮想化）とは、通信キャリアが、自社の既存のアプライアンスベースのインフラストラクチャーをクラウドベースのインフラストラクチャーに変容させるために推進している構想です。Cloudifyなどのオーケストレーションエンジンは、キャリアのインフラストラクチャーへの仮想ネットワーク機能のプロビジョニングプロセスを自動化し、それらのネットワークサービスによる要求SLAの充足を確保することにより、この移行に重要な役割を果たします。Cloudifyは、エージェントレスなデプロイメントのサポートや、ベアメタルのサポート、ネットワークオーケストレーションの搭載、フェデレーテッドデプロイメントなどを通じてネットワーク機能を管理するように設計されました。</p>
 
 <strong>
 
-h2. To Learn a Bit More About Cloudify:
+h2. Cloudifyについてもっと詳しく知るには:
 
 </strong>
 
@@ -132,29 +134,29 @@ h2. To Learn a Bit More About Cloudify:
 
 <strong>
 
-h1. About GigaSpaces Technologies
+h1. GigaSpaces Technologiesについて
 
 </strong>
 
-<p><a href="http://www.gigaspaces.com">GigaSpaces Technologies</a> is a fast growing, innovative technology company, established in 2000, with its headquarters located in Israel, and offices around the globe – New York, San Jose, London and Hong Kong. Our company is growing significantly every year, serving the world’s largest organizations.</p>
+<p><a href="http://www.gigaspaces.com">GigaSpaces Technologies</a> は、2000年に設立され、急速に成長している革新的なテクノロジー企業、本社はイスラエルに、オフィスはニューヨークや、サンノゼ、ロンドン、香港など世界中に設けています。当社は世界有数の大企業との取引を通じて、年を追うごとに大きく成長を続けています。</p>
 
-h2. Products and Technology
+h2. 製品とテクノロジー
 
-<p>GigaSpaces provides software middleware for deployment, management and scaling of mission-critical applications on cloud environments through two main product lines, XAP -- Extreme Application Platform -- and Cloudify.</p>
-<p>XAP is an in-memory computing platform that leverages fast event processing and data access to provide extreme scalability, enabling your application to process massive amounts of data in real time. XAP allows you to boost your application’s performance without changing the underlying hardware, achieve better availability and uptime, and minimize your license and hardware costs.</p>
-<p>Cloudify is an open source software platform that enables organizations to quickly deploy, manage and scale existing and new enterprise-grade applications on any cloud, with no changes to the code or architecture. Cloudify brings cloud orchestration and DevOps automation to any cloud and application stack.</p>
+<p>GigaSpacesは、XAP（Extreme Application Platform）そしてCloudifyという2つの主要な製品ラインを通じてクラウド環境上でのミッションクリティカルなアプリケーションのデプロイメントと、管理、スケーリングのためのソフトウェアやミドルウェアを提供しています。</p>
+<p>XAPは、高速なイベント処理とデータアクセスを活用するインメモリコンピューティングプラットフォームで、極度のスケーラビリティをもたらし、アプリケーションによる膨大なデータのリアルタイムでの処理を実現します。XAPでは、ハードウェアを変えずにアプリケーションのパフォーマンスを増強し、可用性と稼働時間を改善するとともに、ライセンスとハードウェアのコストを最小限に抑えることができます。</p>
+<p>Cloudifyはオープンソースソフトウェアプラットフォームであり、企業は既存または新規の企業向けアプリケーションを、どのクラウドにも、コードやアーキテクチャーを全く変えずに、迅速にデプロイ、管理、スケーリングすることが可能です。Cloudifyは、あらゆるクラウドとアプリケーションスタックに、クラウドオーケストレーションとDevOpsオートメーションをもたらします。</p>
 
 <strong>
 
-h2. Satisfied Customers
+h2. 高い顧客満足度
 
 </strong>
 
-<p>GigaSpaces has a strong ecosystem of clients and partners serving over 500 of the world’s leading organizations. These companies cross market industries, from top financial firms, e-commerce companies, online gaming providers, healthcare organizations through telecom carriers, some of which include: Bank of America, Morgan Stanley, Goldman Sacks, Reuters, Bloomberg, Bank of China, American Airlines, Sears, Alcatel-Lucent, Cisco, IBM, HP, Deutsche Bank, GE ....and more.</p>
+<p>GigaSpacesはクライアントとパートナーからなる強固なエコシステムを持ち、世界の有力企業500社以上にサービスを提供しています。これらの企業は大手金融企業や電子商取引企業、オンラインゲームプロバイダー、医療団体から通信キャリアまで、例を挙げればバンク・オブ・アメリカ、モルガン・スタンレー、ゴールドマンサックス、ロイター、ブルームバーグ、中国銀行、アメリカン航空、シアーズ、アルカテル・ルーセント、シスコ、IBM、HP、ドイツ銀行、GEなど、様々な業界を対象にクロスマーケティングを行っています。</p>
 
 <strong>
 
-h2. Awards and Recognition
+h2. 表彰と評価
 
 </strong>
 
