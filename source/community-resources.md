@@ -1,6 +1,6 @@
 ---
 layout: bt_default
-title: Community Resources
+title: コミュニティリソース
 ---
 
 <section id="inner-headline">
