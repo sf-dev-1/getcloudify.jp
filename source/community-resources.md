@@ -87,7 +87,6 @@ title: Community Resources
 					<td style="background-color:transparent;">
 						<h2><strong>問題点</strong></h2>
 						<p>
-							Issues and feature requests can be filed in our <a href="https://cloudifysource.atlassian.net/browse/CFY">project Jira</a>. Note that you'll need to <a href="https://cloudifysource.atlassian.net/admin/users/sign-up">create an account</a> first. If you are not sure whether it's an issue, please post a question at one of our mailing lists first.
 							問題点や機能に関するリクエストは、<a href="https://cloudifysource.atlassian.net/browse/CFY">Jiraで管理されたプロジェクト</a>に投稿できます。先に<a href="https://cloudifysource.atlassian.net/admin/users/sign-up">アカウントを作成</a> しなければならないことにご注意ください。問題点か分からない場合には、いずれかのメーリングリストに最初に質問を投稿してください。
 						</p>												
 					</td>	
