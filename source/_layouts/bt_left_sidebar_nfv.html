@@ -4,7 +4,7 @@
 <body>
 <div id="wrapper">
    {% include header.html %}
-   	
+    
 
 <section id="inner-headline">
         <div class="container">
@@ -27,29 +27,29 @@
                 <div class="span3">
                     <aside class="left-sidebar">
                         <div class="widget">                        
-                            <h5 class="widgetheading"><strong><font color="00B4DA">Resources</font></strong></h5>
+                            <h5 class="widgetheading"><strong><font color="00B4DA">リソース</font></strong></h5>
                             {% include menu_side_nfv.html %}
                             <!-- <ul class="pagination" id="myPager"></ul> -->
                         </div>
                         </aside>
                 </div>
 
-				<div class="span9">
-					<div id="pageContent">
-					{{content}} 
+                <div class="span9">
+                    <div id="pageContent">
+                    {{content}} 
 
-									</div>
-				</div>
-				
-			</div>
+                                    </div>
+                </div>
+                
+            </div>
             </div>
             </section>
 
-	 <div class="clear"></div>  
+     <div class="clear"></div>  
    {% include footer.html %}   
 </div>
 <a href="#" class="scrollup"><i class="icon-chevron-up"></i></a>
-{% include footer_scripts.html %}	
+{% include footer_scripts.html %}   
 <!--for pagination-->
 <input type='hidden' id='current_page' />
 <input type='hidden' id='show_event_per_page' />
@@ -96,15 +96,15 @@ $(function() {
     
     //and show the first n (show_event_per_page) elements
     $('#eventsWrapper').children().slice(0, show_event_per_page).css('display', 'block');
-	
-	 if($('.active_page').parent().prev().children('.page_link').length!=true){
-		$('.span8 .previous_link').hide();
-		$('.span8 .next_link').show();
-	}
-	  if($('.active_page').parent().next().children('.page_link').length!=true){
-		$('.span8 .next_link').hide();
-		$('.span8 .previous_link').show();
-	}
+    
+     if($('.active_page').parent().prev().children('.page_link').length!=true){
+        $('.span8 .previous_link').hide();
+        $('.span8 .next_link').show();
+    }
+      if($('.active_page').parent().next().children('.page_link').length!=true){
+        $('.span8 .next_link').hide();
+        $('.span8 .previous_link').show();
+    }
     
 });
  
@@ -119,7 +119,7 @@ function previous(){
 }
  
 function next(){
-	$('.span8 .previous_link').show();
+    $('.span8 .previous_link').show();
     new_page = parseInt($('#current_page').val()) + 1;
     //if there is an item after the current active link run the function
     if($('.active_page').parent().next().children('.page_link').length==true){
@@ -147,19 +147,19 @@ function go_to_page(page_num){
     
     //update the current page input field
     $('#current_page').val(page_num);
-	
-	 if($('.active_page').parent().prev().children('.page_link').length!=true){
-		$('.span8 .previous_link').hide();
-		$('.span8 .next_link').show();
-	}else{
-	$('.span8 .previous_link').show();
-	}
-	  if($('.active_page').parent().next().children('.page_link').length!=true){
-		$('.span8 .next_link').hide();
-		$('.span8 .previous_link').show();
-	}else{
-	$('.span8 .next_link').show();
-	}
+    
+     if($('.active_page').parent().prev().children('.page_link').length!=true){
+        $('.span8 .previous_link').hide();
+        $('.span8 .next_link').show();
+    }else{
+    $('.span8 .previous_link').show();
+    }
+      if($('.active_page').parent().next().children('.page_link').length!=true){
+        $('.span8 .next_link').hide();
+        $('.span8 .previous_link').show();
+    }else{
+    $('.span8 .next_link').show();
+    }
 
 }
    */  
@@ -207,7 +207,7 @@ function nextLink(){
   goToPage = parseInt($('.pager').data("curr")) + 1;
   //if($('.activePage').next('.page_link2').length==true){
   if($('.activePage').parent().next().find('.page_link2').length==true){
-	goTo(goToPage);
+    goTo(goToPage);
   }
 }
 
@@ -271,7 +271,7 @@ $.fn.pageMe = function(opts){
     if (numPages<=1) {
         pager.find('.nextpage_link').hide();
     }
-  	pager.children().eq(1).addClass("active");
+    pager.children().eq(1).addClass("active");
     
     children.hide();
     children.slice(0, perPage).show();
@@ -323,11 +323,11 @@ $.fn.pageMe = function(opts){
         pager.data("curr",page);
        
         if (settings.numbersPerPage>1) {
-       		$('.pageLink').hide();
-       		$('.pageLink').slice(page, settings.numbersPerPage+page).show();
-    	}
+            $('.pageLink').hide();
+            $('.pageLink').slice(page, settings.numbersPerPage+page).show();
+        }
       
-      	pager.children().removeClass("active");
+        pager.children().removeClass("active");
         pager.children().eq(page+1).addClass("active");
     
     }

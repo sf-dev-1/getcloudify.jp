@@ -1,6 +1,6 @@
 ---
 layout: bt_about
-title: How It Works
+title: 製品の仕組み
 category: 製品
 ---
 			<section id="inner-headline">
@@ -28,59 +28,59 @@ category: 製品
 										<div class="span12">
 										<!-- <div class="tabbable tabs-below"> -->
 											<ul class="nav nav-tabs">
-												<li class="active"><a href="#one" data-toggle="tab"><i class="icon-book"></i> 1. Blueprint Configuration</a></li>
-												<li><a href="#two" data-toggle="tab"><i class="icon-hand-up"></i> 2. Single-Click Installation</a></li>
-												<li><a href="#three" data-toggle="tab"><i class="icon-stethoscope"></i>3. Monitoring</a></li>
-												<li><a href="#four" data-toggle="tab"><i class="icon-heart"></i>4. Auto-Healing</a></li>
-												<li><a href="#five" data-toggle="tab"><i class="icon-cog"></i> 5. Upgrading</a></li>
-												<li><a href="#six" data-toggle="tab"><i class="icon-certificate"></i> 6. Auto-Scaling</a></li>
+												<li class="active"><a href="#one" data-toggle="tab"><i class="icon-book"></i> 1. ブループリントのコンフィギュレーション</a></li>
+												<li><a href="#two" data-toggle="tab"><i class="icon-hand-up"></i> 2. インストールは1度クリックするだけ</a></li>
+												<li><a href="#three" data-toggle="tab"><i class="icon-stethoscope"></i>3. モニタリング</a></li>
+												<li><a href="#four" data-toggle="tab"><i class="icon-heart"></i>4. 自動回復</a></li>
+												<li><a href="#five" data-toggle="tab"><i class="icon-cog"></i> 5. アップグレード</a></li>
+												<li><a href="#six" data-toggle="tab"><i class="icon-certificate"></i> 6. 自動スケーリング</a></li>
 											</ul>
 											<div class="tab-content">
 												<div class="tab-pane active" id="one">
 														<div class="views-field-body">
-																		<div class="field-content"><p>Taking existing apps to the cloud with no code changes is easy with Cloudify. The secret is in the blueprint. A Cloudify print is a simple config that describes the application's deployment and management automation plan on any cloud.</p>
+																		<div class="field-content"><p>Cloudifyでは既存のアプリケーションをコード変更なしで簡単にクラウドに移すことができます。その秘訣はブループリント。Cloudifyのプリントは、各アプリケーションのデプロイメントと管理の自動化プランをどのクラウドにでも記述できる、シンプルなコンフィギュレーションとなっています。</p>
 														<div class="aligncenter">				
 														<p><img alt="" src="{{ site.baseurl }}/img/recipe.png" width="600"></p></div>
 														
 														<div class="cloudify-blue-border">
-															Cloudify blueprints automagically configure the dependencies between application tiers, the lifecycle events (install, start, configure, stop, uninstall etc) per tier and the cloud resources used by each tier. In addition, the blueprint determines how to monitor, upgrade, maintain and scale your application tiers on-demand.</div></div>
+															Cloudifyのブループリントは、独自の仕組みによりアプリケーション層間の依存性や、各層のライフサイクルイベント（インストール、起動、設定、停止、アンインストールなど）、各層の使用するクラウドリソースを自動的に構成します。更にブループリントは、アプリケーション層の監視とアップグレード、保守、スケーリングのオンデマンドでの実施方法も定めます。</div></div>
 														  </div>
 												   </div>
 												<div class="tab-pane" id="two">
-														<div class="field-content"><p>The Cloudify orchestrator uses the pre-defined blueprint to install your application on the cloud end to end: from VM provisioning all the way to application code deployment and dynamic wiring of your application's dependencies.</p>
+														<div class="field-content"><p>Cloudifyのオーケストレーターでは、クラウド上のアプリケーションのエンド・ツー・エンドのインストール、つまりVMプロビジョニングからアプリケーションコードのデプロイメント、更にはアプリケーションの依存性におけるダイナミックワイヤリングにまで、既定のブループリントを使用します。</p>
 														<div class="aligncenter">
 														<p><img alt="" src="{{ site.baseurl }}/img/singleclick.png" width="600"></p></div>
 														<div class="cloudify-blue-border">
-															Cloudify applies a particular cloud API through the Cloud Driver layer. The Cloud Driver creates the VMs and installs Cloudify agents on each one. From that point, Cloudify Agents are orchestrated to install and start your application according to the blueprint.</div></div>
+															CloudifyはCloud Driverレイヤーを通じて特定のクラウドAPIを適用します。Cloud DriverはVMを作成し、各VMにはCloudifyエージェントをインストールします。そこからはオーケストレイトされたCloudifyエージェントが、ブループリントに従ってアプリケーションをインストールし、起動します。</div></div>
 												</div>
 												<div class="tab-pane" id="three">
-													<div class="field-content"><p>Cloudify doesn't stop working for you once the deployment is complete. Cloudify monitors your application based on any custom metrics you define. Get the most up to date performance indicators in a user friendly dashboard.</p>
+													<div class="field-content"><p>デプロイメントが完了してもCloudifyの仕事は終わりません。Cloudifyはユーザー定義による独自のメトリクスに基づいてアプリケーションを監視します。使い勝手のいいダッシュボードに表示された、最新のデータパフォーマンスインディケーターをご覧ください。</p>
 														<div class="aligncenter">
 													<p><img alt="" src="{{ site.baseurl }}/img/Monitoring.png" width="600"></p></div>
 													<div class="cloudify-blue-border">
-														Cloudify allows you to plug-in to your monitoring technology of choice, providing a means to install your monitoring agents as part of the application installation, and report your metrics to the Cloudify policy engine and metrics database. Cloudify visualizes your monitoring metrics and statistics over web reports and provides you with APIs to query monitoring metrics from any of your systems.  </div></div>
+														Cloudifyでは任意のモニタリングテクノロジーへのプラグインが可能です。それによりアプリケーションをインストールする際にお使いのモニタリングエージェントもインストールし、現状のメトリクスをCloudifyのポリシーエンジンとメトリクスデータベースにレポートできるようになっています。Cloudifyはウェブベースのレポートでモニタリングメトリクスと統計データを可視化し、既存のどのシステムからでもモニタリングメトリクスのクエリを実行するAPIを提供します。</div></div>
 																						
 												</div>
 												<div class="tab-pane" id="four">
-															<div class="field-content"><p>Cloudify's new and improved auto-healing technology, allows you to get the most out of the cloud by maintaining your application’s health without manual intervention. </p>
+															<div class="field-content"><p>Cloudifyの新たに改善された自動回復テクノロジーにより、人手を介さずにアプリケーションの状態を良好に保てるため、クラウドを最大限に活用することができます。 </p>
 														<div class="aligncenter">				
 															<p><img alt="" src="{{ site.baseurl }}/img/autoheal.png" width="600"></p></div>
 															<div class="cloudify-blue-border">
-																Cloudify auto-heals crashed middleware or lost VMs while automatically reconfiguring the app. Stay tuned for our next release and all the goodies coming with it.	</div></div>
+																Cloudifyはアプリケーションの再構成を自動的に進めつつ、クラッシュしたミドルウェアや喪失したVMを自動回復させます。</div></div>
 													</div>
 												<div class="tab-pane" id="five">
-														<div class="field-content"><p>Cloudify supports post-deployment upgrades and fine-tuning via blueprint custom workflows. Custom workflows can be invoked manually or programmatically.</p>
+														<div class="field-content"><p>Cloudifyでは、デプロイ後のアップグレードと微調整について、ブループリントのカスタムワークフローでサポートしています。カスタムワークフローは手動でもプログラムからでも呼び出せます。</p>
 														<div class="aligncenter">				
 														<p><img alt="" src="{{ site.baseurl }}/img/upgrade.png" width="600"></p></div>
 														<div class="cloudify-blue-border">
-															The Cloudify GUI, CLI and REST API allows you to invoke a custom workflow described in the blueprint. For example a custom workflow can define how to acquire a new version of your code and deploy it onto your middleware.</div></div>
+															CloudifyのGUIとCLI、REST APIにより、ブループリントに記述されたカスタムワークフローを呼び出すことができます。例えば、カスタムワークフローは、コードの新バージョンの取得方法やミドルウェアへのデプロイ方法を定義できます。</div></div>
 												</div>
 												<div class="tab-pane" id="six">
-														<div class="field-content"><p>Cloudify will automatically scale your application for you using customized policies with scaling rules that are evaluated against custom metrics you define.</span></h2>
+														<div class="field-content"><p>Cloudifyは、カスタマイズされたポリシーを利用して既存のアプリケーションを自動的に拡張します。ポリシーにはスケーリング則が記載されており、ユーザー定義のカスタムメトリクスに照らして評価されます。</span></h2>
 														<div class="aligncenter">				
 													<p><img alt="" src="{{ site.baseurl }}/img/autoscale.png" width="600"></p></div>
 													<div class="cloudify-blue-border">
-														When the Cloudify Orchestrator detects an SLA breach using the custom scaling rules, it invokes a scale-out workflow that can create additional nodes, adds them to the load balancer or perform any other set of desired steps (using a customized workflow).
+														Cloudifyのオーケストラレイターがカスタムスケーリング則を用いてSLA違反を検出した際は、追加ノードを作成するスケールアウトワークフローを呼び出し、それをロードバランサーに追加するか、もしくは他の望ましい手順を（カスタムワークフローを利用して）遂行します。
 														</div>
 													</div>
 												</div>
