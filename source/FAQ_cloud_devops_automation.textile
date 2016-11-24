@@ -161,7 +161,7 @@ h2(#q10). *Q: Cloudifyは他のどのテクノロジーと統合できますか�
 
 h2(#q11). *Q: Cloudifyのブループリントはどのように始めるのでしょうか。どこにありますか。*
 
- *A:* 利用可能なブループリントはすべて<a href="https://github.com/cloudify-cosmo">Github</a>にあります。Cloudifyウィジェットやインタラクティブシェル（近日予定）を試し、事前にブループリントの動作を確認することができます。Cloudifyのブループリントの始め方についての"動画のチュートリアル":/cloudifysourcetv.html :もご確認いただけます。
+ *A:* 利用可能なブループリントはすべて<a href="https://github.com/cloudify-cosmo">Github</a>にあります。Cloudifyウィジェットやインタラクティブシェル（近日予定）を試し、事前にブループリントの動作を確認することができます。Cloudifyのブループリントの始め方についての<a href="/cloudifysourcetv.html">動画のチュートリアル</a>もご確認いただけます。
 すぐに始めるなら、<a href="http://docs.getcloudify.org/3.3.1/blueprints/overview/">クイックスタートガイド</a>に従ってください。
 
 
