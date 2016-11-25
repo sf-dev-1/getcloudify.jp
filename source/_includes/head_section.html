@@ -8,7 +8,11 @@
 <meta class="swiftype" name="score" data-type="float" content="{% pagescore %}" />
 <meta class="swiftype" name="section" data-type="string" content="{% currentsection %}" />
 <meta content="Cloudify - {{ page.title }}" property="og:site_name">
+
 {% seo %}
+{% if page.noindex %}
+<meta name="robots" content="noindex,follow"/>
+{% endif %}
 {% if page.title %}
   <meta content="{{ page.title }}" property="og:title">
 {% else %}
@@ -25,16 +29,16 @@
   <meta content="{{ site.description }}" property="og:description">
 {% endif %}
 {% if page.url %}
-  <meta content="http://getcloudify.org/{{page.url}}" property="og:url">
+  <meta content="http://getcloudify.org{{page.url}}" property="og:url">
 {% endif %}
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
   <meta content="http://getcloudify.org/about/" property="article:author">
 {% endif %}
 {% if page.image %}
- <meta content="http://getcloudify.org/assets/img/posts/{{ page.image }}" property="og:image">
+ <meta content="http://getcloudify.org/img/{{ page.image }}" property="og:image">
 {% else %}
-  <meta content="http://getcloudify.org/assets/img/logo-high-resolution.png" property="og:image">
+  <meta content="http://getcloudify.org/img/Logo-BlueWebNoGS1.png" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
@@ -69,6 +73,7 @@
 
     <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet" /> <!-- this is a sass file, search for main.scss instead -->
 
+	<link href="{{ site.baseurl }}/css/cfy.css" rel="stylesheet">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
 	<!-- Theme skin -->
 	<link id="t-colors" href="{{ site.baseurl }}/skins/blue.css" rel="stylesheet" />
