@@ -66,7 +66,7 @@ h2(#q02). *Q: Cloudifyと、Cloud FoundryやOpenShiftのようなPaaSプラッ�
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q03). *Q: Cloudifyはサービスとして提供されるのですか。*
@@ -74,7 +74,7 @@ h2(#q03). *Q: Cloudifyはサービスとして提供されるのですか。*
  *A:* いいえ、Cloudifyの提供はサービスとしてではありません。任意のクラウドでのインストールと使用を可能にするオープンソースフレームワークとして提供されます。ただ、間もなくトライアルサービスを始める予定ですので、ソフトウェアのダウンロードやインストールをしなくてもオンラインで試すことができます。
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q04). *Q: すぐにCloudifyを試すにはどのようにすれば良いのですか。*
@@ -82,7 +82,7 @@ h2(#q04). *Q: すぐにCloudifyを試すにはどのようにすれば良いの�
  *A:* <a href="http://getcloudify.org/downloads/get_cloudify.html">こちら</a>,でダウンロードして、そのまま<a href="http://docs.getcloudify.org/3.3.1/intro/getting-started/">『はじめに』</a>guideを開き、指示に従ってください。
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q05A). *Q: Cloudifyと、ChefやPuppet、SaltStack、Ansibleといった構成管理ツールとの違いを教えてください。Cloudifyはこれらのツールと一緒に使えますか。*
@@ -91,7 +91,7 @@ h2(#q05A). *Q: Cloudifyと、ChefやPuppet、SaltStack、Ansibleといった構�
  一方、Cloudifyでは、アプリケーションの視点から物事を見ています。つまり、あるアプリケーションスタックについて、その全階層と各階層の依存と詳細といった記述を与えられると、Cloudifyはそのアプリケーションスタックを実現するために必要な全ステップを踏みます。これには、クラウドへのインフラストラクチャーリソースのプロビジョニング（コンピュートとストレージ、ネットワーク）、プロビジョニングされた各VMへの適切な役割の割当、CMの設定（これはCMツールが行うのが通例です）、各階層への適切な情報の注入、それらの正しい順序での起動、その後は各層のインスタンスの継続的なモニタリング、故障時の回復、必要な際には階層のスケーリングも含まれます。各VMの構成に必要となれば、Cloudifyは確かにこれらのCMツールと統合できますし、実際のところユーザーには統合することをベストプラクティスとして推奨もしています。当社のChefと<a href="http://docs.getcloudify.org/3.3.1/plugins/puppet/">Puppet</a>のプラグインや<a href="http://docs.getcloudify.org/3.3.1/plugins/script/">Script Plugin</a>もご確認ください。構成管理のための<a href="http://getcloudify.org/2014/10/30/Docker-cloud-orchestration-configuration-management.html" >Docker</a>の利用に関する資料や、<a href="http://docs.getcloudify.org/3.3.1/plugins/docker/">Docker Plugin</a>についてもご確認いただけます。
 
 
-"Back to top":#top
+"先頭に戻る":#top
 
 <hr/>
 
@@ -100,7 +100,7 @@ h2(#q05B). *Q: これまでのChefのレシピやPuppetのマニフェストをC
  *A:* はい、上記をご覧ください。CloudifyならChefのクックブックもPuppetのマニフェストもすべて利用できます。どちらのツールもCloudifyでは本当に直感的に操作できます。CloudifyでのChef利用については専用エリアを設けていますし、Puppetプラグインを使い始める方法はこちらから確認できます。どちらかのツールを利用されている場合には、必ずご確認ください*。*
 
  
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q06). *Q: オーケストレーションにオートメーション、DevOps、継続的デリバリーなど、最近はいろんな専門用語を耳にします。何を指しているのでしょうか。*
@@ -110,7 +110,7 @@ h2(#q06). *Q: オーケストレーションにオートメーション、DevOps
 DevOpsについて詳しくは、どういったことが<a href="http://getcloudify.org/2014/09/28/DevOps-automation-engineer-orchestration.html">DevOps</a>ではないのか、について書かれたこの記事をお読みください。しかし真面目な話ですが、開発と運用の壁を取り払い、コミュニケーションを促すのはある意味、心の持ち方の問題です。貴方の業務に直接かかわる場合ですが、必要に応じて開発や運用からタスクを引き受けるのを恐れるものではありません。
 
 
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q07). *Q: Cloudifyの前提条件を教えてください。*
@@ -119,7 +119,7 @@ h2(#q07). *Q: Cloudifyの前提条件を教えてください。*
 
 
  <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q08A). *Q: 結局、Cloudifyはどのクラウドをサポートしているのでしょうか。その仕組みについても教えてください。*
@@ -128,7 +128,7 @@ h2(#q08A). *Q: 結局、Cloudifyはどのクラウドをサポートしている
   
 
  <br/>
-"Back to top":#top
+"先頭に戻る":#top
 
 <hr/>
 
@@ -138,7 +138,7 @@ h2(#q08B). *Q: Cloudifyは当社のデータセンターや非仮想環境の下
 
  
  <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q09). *Q: Cloudifyをインストールしようとしたのですが、厄介なエラーが出てしまいました。サポートはどこで受けるのでしょうか。*
@@ -147,7 +147,7 @@ h2(#q09). *Q: Cloudifyをインストールしようとしたのですが、厄�
 
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q10). *Q: Cloudifyは他のどのテクノロジーと統合できますか。*
@@ -155,7 +155,7 @@ h2(#q10). *Q: Cloudifyは他のどのテクノロジーと統合できますか�
  *A:* Cloudifyは出荷時に、そのまま私たちの<a href="http://getcloudify.org/cloud_orchestration_cloud_automation.html#HPLink">お気に入りのテクノロジー</a>と併用できるように作られています。素晴らしいツール群に取って代わろうというのではなく、ただ本当にうまく併用させたいのです。使い慣れたツールはほぼどれもCloudifyはおそらくサポートしています。分かりやすいところでChefやPuppet、bash（*nixシステム用）、PowerShell（Windows用）などの構成管理ツールがあります。
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
@@ -167,7 +167,7 @@ h2(#q11). *Q: Cloudifyのブループリントはどのように始めるので�
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q16). *Q: Cloudifyでオリジナルのブループリントを書けますか。どのくらいの難易度でしょうか。*
@@ -178,7 +178,7 @@ h2(#q16). *Q: Cloudifyでオリジナルのブループリントを書けます�
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
@@ -189,7 +189,7 @@ h2(#q12). *Q: Cloudifyは単一のデスクトップでも使えますか。*
 
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q13). *Q: 自動スケーリングの仕組みを教えてください。*
@@ -198,7 +198,7 @@ h2(#q13). *Q: 自動スケーリングの仕組みを教えてください。*
 
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q14). *Q: OpenStackネイティブとはどういう意味ですか。*
@@ -214,7 +214,7 @@ Cloudify 3.xで私たちはそれらの指針にできる限り沿うために<a
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
@@ -223,7 +223,7 @@ h2(#q15). *Q: 企業向けのCloudifyとオープンソースエディション�
  *A:* Cloudifyには、<a href="https://github.com/cloudify-cosmo">ここ</a>から展開して、ニーズに合わせてカスタマイズできる永久無料のオープンソースバージョンと、オープンソースエディションの全機能を内包し、その他の利点も併せ持つPremiumエディションがあります。2つのバージョンについては<a href="http://getcloudify.org/goPro.html">こちら</a>をご覧ください。詳細が必要な場合には、<a href="mailto:hello@getcloudify.org?subject=I'd%20like%20to%20hear%20more%20about%20Cloudify%20Premium">お気軽にご連絡</a>ください。
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
@@ -232,7 +232,7 @@ h2(#q17). *Q: サポートはどうなりますか。*
  *A:* サポートパッケージはCloudifyへのアドオンとして購入できます。また、Cloudify Premiumエディションを選ばれた場合には、サポートはパッケージに含まれています。Cloudify Premiumについて詳しくは、<a href="http://getcloudify.org/goPro.html">こちら</a>をご覧ください。 
 
  <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
@@ -243,7 +243,7 @@ h2(#q18). *Q: 他に知っておくべき事柄はありますか。*
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 

@@ -55,9 +55,9 @@ title: コミュニティリソース
 						<h2><i class="fa fa-slack fa-3x">
 					<td style="background-color:transparent;width:5%">
 					<td style="background-color:transparent;">
-						<h2><strong>Slack Channel</strong></h2>
+						<h2><strong>Slackのチャンネル</strong></h2>
 						<p>
-							Join us in real-time to ask questions, meet our engineers, and get all the latest news by joining on our <a href="http://getcloudify.org/cloudify-community-slack.html">Slack channel</a>. 
+							<a href="http://getcloudify.org/cloudify-community-slack.html">JSlack</a>に登録して頂ければ質問をリアルタイムで回答、弊社のエンジニアの紹介や最新のニュースをお届けできます。
 						</p>						
 					</td>
 				<tr>			 		
