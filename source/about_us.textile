@@ -15,7 +15,7 @@ h1. Cloudifyについて
 
 </strong>
 
-<p>Cloudifyは、オープンソースでTOSCAベースのクラウドオーケストレーションソフトウェアプラットフォーム（アマゾンのOpsWorksのようなもの）です。アプリケーションスタックのインストールやデプロイメントのプロセスに加えて、モニタリングや改善、自動スケーリングといったデプロイ後のプロセスも自動化します。</p>
+<p>Cloudifyは、オープンソースでTOSCAベースのクラウドオーケストレーションソフトウェアプラットフォーム（AWSのOpsWorksのようなもの）です。アプリケーションスタックのインストールやデプロイメントのプロセスに加えて、モニタリングや改善、自動スケーリングといったデプロイ後のプロセスも自動化します。</p>
 
 <strong>
 
@@ -122,9 +122,9 @@ h2. Cloudifyについてもっと詳しく知るには:
 
 </strong>
 
-* Read the <a href="{{ site.baseurl }}/cloud_orchestration_cloud_automation.html">Cloudify Product Overview</a>.
-* Read about Cloudify on <a href="https://en.wikipedia.org/wiki/Cloudify">Wikipedia</a>.
-* Or just dive right in by <a href="http://bit.ly/GPxxpN">forking the code on GitHub</a>.
+* <a href="{{ site.baseurl }}/cloud_orchestration_cloud_automation.html">Cloudify製品概要</a>をお読みください.
+* <a href="https://en.wikipedia.org/wiki/Cloudify">ウィキペディア</a>でCloudifyの記載をお読みください。
+* そのまま<a href="http://bit.ly/GPxxpN">GitHubでコードを分岐させる</a>こともできます。
 
 
 <br/>

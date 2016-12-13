@@ -34,10 +34,10 @@ title: コミュニティリソース
 						<h2><strong>メーリングリスト</strong></h2>
 						<p>
 							<a href="https://groups.google.com/forum/#!forum/cloudify-users">cloudify-users</a>は、Cloudifyに関するあらゆる問題についてユーザーが支援を受け、話し合うメーリングリストです。
-							Cloudifyのコアモジュールへの協力や、プラグインとエクステンションの開発、開発環境関連の問題での支援を希望する場合には、<a href="https://groups.google.com/forum/#!forum/cloudify-developers">cloudify-developers</a>メーリングリストを利用してください。
+							Cloudifyのコアモジュールへの協力や、プラグインとエクステンションの開発、開発環境関連の問題でのサポートを希望する場合には、<a href="https://groups.google.com/forum/#!forum/cloudify-developers">cloudify-developers</a>メーリングリストを利用してください。
 						</p>						
 						<p>
-							Cloudify 2.7をお使いの場合には、<a href="https://cloudifysource.zendesk.com/forums">2.7 mailing lists</a>を参照してください。
+							Cloudify 2.7（旧バージョン）をお使いの場合には、<a href="https://cloudifysource.zendesk.com/forums">2.7 mailing lists</a>を参照してください。
 						</p>
 					</td>
 				<tr>			 		
@@ -67,7 +67,7 @@ title: コミュニティリソース
 					<td style="background-color:transparent;">
 						<h2><strong>ソースコード</strong></h2>
 						<p>		
-							Cloudifyは<a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2ライセンス</a>に基づくオープンソース製品です。コードはCosmo（Kramerが好きなので）のコードネームで<a href="http://github.com/cloudify-cosmo">Githubにホスティングされています</a>。コードのクローンを作成しても、分岐させても、プルリクエストを提出いただいても構いません。Cloudifyについての<a href="{{ site.baseurl }}/how-to-contribute.html"><strong>協業の方法</strong></a>をご覧ください。
+							Cloudifyは<a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2ライセンス</a>に基づくオープンソース製品です。コードはCosmo（Kramerが好きなので）のコードネームで<a href="http://github.com/cloudify-cosmo">Githubにホスティングされています</a>。コードを複製しても、ブランチさせても、プルリクエストを送っていただいても構いません。Cloudifyについての<a href="{{ site.baseurl }}/how-to-contribute.html"><strong>協業の方法</strong></a>をご覧ください。
 						</p>												
 					</td>		
 				<tr>			 		
@@ -77,7 +77,7 @@ title: コミュニティリソース
 					<td style="background-color:transparent;">
 						<h2><strong>IRCチャネル</strong></h2>
 						<p>
-							すぐに支援が必要なときやリアルタイムで話したい場合には、irc.freenode.net (<a href="http://webchat.freenode.net/">webchat.freenode</a>)の#cloudifyチャネルをご利用ください。
+							すぐにサポートが必要なときやリアルタイムで話したい場合には、irc.freenode.net (<a href="http://webchat.freenode.net/">webchat.freenode</a>)の#cloudifyチャネルをご利用ください。
 						</p>						
 					</td>		
 				<tr>			 		
