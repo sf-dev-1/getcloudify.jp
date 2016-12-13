@@ -79,7 +79,7 @@ h2(#q03). *Q: Cloudifyはサービスとして提供されるのですか。*
 
 h2(#q04). *Q: すぐにCloudifyを試すにはどのようにすれば良いのですか。*
 
- *A:* <a href="http://getcloudify.org/downloads/get_cloudify.html">こちら</a>,でダウンロードして、そのまま<a href="http://docs.getcloudify.org/3.3.1/intro/getting-started/">『はじめに』</a>guideを開き、指示に従ってください。
+ *A:* <a href="http://getcloudify.org/downloads/get_cloudify.html">こちら</a>,でダウンロードして、そのまま<a href="http://docs.getcloudify.org/3.3.1/intro/getting-started/">『はじめに』</a>ガイドを開き、指示に従ってください。
  
 <br/>
 "先頭に戻る":#top
@@ -220,7 +220,7 @@ Cloudify 3.xで私たちはそれらの指針にできる限り沿うために<a
 
 h2(#q15). *Q: 企業向けのCloudifyとオープンソースエディションの比較になりますが、どう違うのでしょう。*
 
- *A:* Cloudifyには、<a href="https://github.com/cloudify-cosmo">ここ</a>から展開して、ニーズに合わせてカスタマイズできる永久無料のオープンソースバージョンと、オープンソースエディションの全機能を内包し、その他の利点も併せ持つPremiumエディションがあります。2つのバージョンについては<a href="http://getcloudify.org/goPro.html">こちら</a>をご覧ください。詳細が必要な場合には、<a href="mailto:hello@getcloudify.org?subject=I'd%20like%20to%20hear%20more%20about%20Cloudify%20Premium">お気軽にご連絡</a>ください。
+ *A:* Cloudifyには、<a href="https://github.com/cloudify-cosmo">ここ</a>から展開して、ニーズに合わせてカスタマイズできる永久無料のオープンソースバージョンと、オープンソースエディションの全機能を内包し、その他の利点も併せ持つプレミアムエディションがあります。2つのバージョンについては<a href="http://getcloudify.org/goPro.html">こちら</a>をご覧ください。詳細が必要な場合には、<a href="mailto:hello@getcloudify.org?subject=I'd%20like%20to%20hear%20more%20about%20Cloudify%20Premium">お気軽にご連絡</a>ください。
 
 <br/>
 "先頭に戻る":#top
@@ -229,7 +229,7 @@ h2(#q15). *Q: 企業向けのCloudifyとオープンソースエディション�
 
 h2(#q17). *Q: サポートはどうなりますか。*
 
- *A:* サポートパッケージはCloudifyへのアドオンとして購入できます。また、Cloudify Premiumエディションを選ばれた場合には、サポートはパッケージに含まれています。Cloudify Premiumについて詳しくは、<a href="http://getcloudify.org/goPro.html">こちら</a>をご覧ください。 
+ *A:* サポートパッケージはCloudifyへのアドオンとして購入できます。また、Cloudifyプレミアムエディションを選ばれた場合には、サポートはパッケージに含まれています。Cloudify Premiumについて詳しくは、<a href="http://getcloudify.org/goPro.html">こちら</a>をご覧ください。 
 
  <br/>
 "先頭に戻る":#top
