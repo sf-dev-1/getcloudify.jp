@@ -66,7 +66,7 @@ h2(#q02). *Q: Cloudifyと、Cloud FoundryやOpenShiftのようなPaaSプラッ�
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q03). *Q: Cloudifyはサービスとして提供されるのですか。*
@@ -74,24 +74,24 @@ h2(#q03). *Q: Cloudifyはサービスとして提供されるのですか。*
  *A:* いいえ、Cloudifyの提供はサービスとしてではありません。任意のクラウドでのインストールと使用を可能にするオープンソースフレームワークとして提供されます。ただ、間もなくトライアルサービスを始める予定ですので、ソフトウェアのダウンロードやインストールをしなくてもオンラインで試すことができます。
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q04). *Q: すぐにCloudifyを試すにはどのようにすれば良いのですか。*
 
- *A:* "こちら":http://getcloudify.org/downloads/get_cloudify.html,でダウンロードして、そのまま "『はじめに』":http://docs.getcloudify.org/3.3.1/intro/getting-started/ guideを開き、指示に従ってください。
+ *A:* <a href="http://getcloudify.org/downloads/get_cloudify.html">こちら</a>,でダウンロードして、そのまま<a href="http://docs.getcloudify.org/3.3.1/intro/getting-started/">『はじめに』</a>ガイドを開き、指示に従ってください。
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q05A). *Q: Cloudifyと、ChefやPuppet、SaltStack、Ansibleといった構成管理ツールとの違いを教えてください。Cloudifyはこれらのツールと一緒に使えますか。*
 
  *A:* 構成管理（CM）ツールは、個々のサーバーを構成してサービスに対応させるのに重要なものです。サーバーと望ましい状態を指定されると、サーバーを最終的に望ましい状態にするために必要な全構成手順を確実に踏んでくれます*。* 
- 一方、Cloudifyでは、アプリケーションの視点から物事を見ています。つまり、あるアプリケーションスタックについて、その全階層と各階層の依存と詳細といった記述を与えられると、Cloudifyはそのアプリケーションスタックを実現するために必要な全ステップを踏みます。これには、クラウドへのインフラストラクチャーリソースのプロビジョニング（コンピュートとストレージ、ネットワーク）、プロビジョニングされた各VMへの適切な役割の割当、CMの設定（これはCMツールが行うのが通例です）、各階層への適切な情報の注入、それらの正しい順序での起動、その後は各層のインスタンスの継続的なモニタリング、故障時の回復、必要な際には階層のスケーリングも含まれます。各VMの構成に必要となれば、Cloudifyは確かにこれらのCMツールと統合できますし、実際のところユーザーには統合することをベストプラクティスとして推奨もしています。当社のChefと"Puppet":http://docs.getcloudify.org/3.3.1/plugins/puppet/のプラグインや"Script Plugin":http://docs.getcloudify.org/3.3.1/plugins/script/もご確認ください。構成管理のための"Docker":http://getcloudify.org/2014/10/30/Docker-cloud-orchestration-configuration-management.htmlの利用に関する資料や、"Docker Plugin":http://docs.getcloudify.org/3.3.1/plugins/docker/についてもご確認いただけます。
+ 一方、Cloudifyでは、アプリケーションの視点から物事を見ています。つまり、あるアプリケーションスタックについて、その全階層と各階層の依存と詳細といった記述を与えられると、Cloudifyはそのアプリケーションスタックを実現するために必要な全ステップを踏みます。これには、クラウドへのインフラストラクチャーリソースのプロビジョニング（コンピュートとストレージ、ネットワーク）、プロビジョニングされた各VMへの適切な役割の割当、CMの設定（これはCMツールが行うのが通例です）、各階層への適切な情報の注入、それらの正しい順序での起動、その後は各層のインスタンスの継続的なモニタリング、故障時の回復、必要な際には階層のスケーリングも含まれます。各VMの構成に必要となれば、Cloudifyは確かにこれらのCMツールと統合できますし、実際のところユーザーには統合することをベストプラクティスとして推奨もしています。当社のChefと<a href="http://docs.getcloudify.org/3.3.1/plugins/puppet/">Puppet</a>のプラグインや<a href="http://docs.getcloudify.org/3.3.1/plugins/script/">Script Plugin</a>もご確認ください。構成管理のための<a href="http://getcloudify.org/2014/10/30/Docker-cloud-orchestration-configuration-management.html" >Docker</a>の利用に関する資料や、<a href="http://docs.getcloudify.org/3.3.1/plugins/docker/">Docker Plugin</a>についてもご確認いただけます。
 
 
-"Back to top":#top
+"先頭に戻る":#top
 
 <hr/>
 
@@ -100,27 +100,26 @@ h2(#q05B). *Q: これまでのChefのレシピやPuppetのマニフェストをC
  *A:* はい、上記をご覧ください。CloudifyならChefのクックブックもPuppetのマニフェストもすべて利用できます。どちらのツールもCloudifyでは本当に直感的に操作できます。CloudifyでのChef利用については専用エリアを設けていますし、Puppetプラグインを使い始める方法はこちらから確認できます。どちらかのツールを利用されている場合には、必ずご確認ください*。*
 
  
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q06). *Q: オーケストレーションにオートメーション、DevOps、継続的デリバリーなど、最近はいろんな専門用語を耳にします。何を指しているのでしょうか。*
 
  *A:* オートメーションは特定のタスクに焦点を当てるのが通例です。オーケストレーションは、ステロイドで増強したオートメーションのようなものです。オートメーションのオートメーション　 — つまりそれは、タスクの実行順（例えば、サーバープロビジョニングの際に、ウェブサーバーの前にデータベースを起動させるなど）も考慮に入れた、ワークフローとプロセスのオートメーションであるということです。クラウドオーケストレーションとクラウドオートメーションの比較については良いブログの記事がありますので役立つかもしれません。
 
-DevOpsについて詳しくは、どういったことが"DevOps":http://getcloudify.org/2014/09/28/DevOps-automation-engineer-orchestration.htmlではないのか、について書かれたこの記事をお読みください。しかし真面目な話ですが、開発と運用の壁を取り払い、コミュニケーションを促すのはある意味、心の持ち方の問題です。貴方の業務に直接かかわる場合ですが、必要に応じて開発や運用からタスクを引き受けるのを恐れるものではありません。
+DevOpsについて詳しくは、どういったことが<a href="http://getcloudify.org/2014/09/28/DevOps-automation-engineer-orchestration.html">DevOps</a>ではないのか、について書かれたこの記事をお読みください。しかし真面目な話ですが、開発と運用の壁を取り払い、コミュニケーションを促すのはある意味、心の持ち方の問題です。貴方の業務に直接かかわる場合ですが、必要に応じて開発や運用からタスクを引き受けるのを恐れるものではありません。
 
 
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q07). *Q: Cloudifyの前提条件を教えてください。*
 
- *A:*  For running the Cloudify CLI, you need to have Python 2.7. When running on clouds such as OpenStack or Amazon, you need to have proper IaaS credentials and set them properly in Cloudify. For more details, please see our "guide":http://docs.getcloudify.org.
- Cloudify CLIの動作にはPython 2.7が必要です。OpenStackやAmazonのようなクラウド上で動作する際は、適切なIaaSのクレデンシャルを持ち、それらをCloudifyに正しく設定しなければなりません。詳しくは当社の"ガイド":http://docs.getcloudify.orgをご覧ください。 
+ *A:*  Cloudify CLIの動作にはPython 2.7が必要です。OpenStackやAmazonのようなクラウド上で動作する際は、適切なIaaSのクレデンシャルを持ち、それらをCloudifyに正しく設定しなければなりません。詳しくは当社の<a href="http://docs.getcloudify.org">ガイド</a>をご覧ください。 
 
 
  <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q08A). *Q: 結局、Cloudifyはどのクラウドをサポートしているのでしょうか。その仕組みについても教えてください。*
@@ -129,7 +128,7 @@ h2(#q08A). *Q: 結局、Cloudifyはどのクラウドをサポートしている
   
 
  <br/>
-"Back to top":#top
+"先頭に戻る":#top
 
 <hr/>
 
@@ -139,58 +138,58 @@ h2(#q08B). *Q: Cloudifyは当社のデータセンターや非仮想環境の下
 
  
  <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q09). *Q: Cloudifyをインストールしようとしたのですが、厄介なエラーが出てしまいました。サポートはどこで受けるのでしょうか。*
 
- *A:*  "デベロッパー":https://groups.google.com/forum/#!forum/cloudify-developersと"ユーザー":https://groups.google.com/forum/#!forum/cloudify-users forumsのフォーラムか、"stackexchange":http://stackoverflow.com/questions/tagged/cloudifyにスレッドを立てることもできます。また私たちはトラブルシューティングに常に向き合っているので、"直接ご連絡":mailto:hello@getcloudify.orgいただいても大丈夫です。2週間に一度オープンQ&Aセッションを営業時間内に設けているため、当社チームのメンバーから実践的なサポートが受けられます。
+ *A:*  <a href="https://groups.google.com/forum/#!forum/cloudify-developers">デベロッパー</a>と<a href="https://groups.google.com/forum/#!forum/cloudify-users">ユーザー</a> forumsのフォーラムか、<a href="http://stackoverflow.com/questions/tagged/cloudify">stackexchange</a>にスレッドを立てることもできます。また私たちはトラブルシューティングに常に向き合っているので、<a href="mailto:hello@getcloudify.org">直接ご連絡</a>いただいても大丈夫です。2週間に一度オープンQ&Aセッションを営業時間内に設けているため、当社チームのメンバーから実践的なサポートが受けられます。
 
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q10). *Q: Cloudifyは他のどのテクノロジーと統合できますか。*
 
- *A:* Cloudifyは出荷時に、そのまま私たちの"お気に入りのテクノロジー":http://getcloudify.org/cloud_orchestration_cloud_automation.html#HPLinkと併用できるように作られています。素晴らしいツール群に取って代わろうというのではなく、ただ本当にうまく併用させたいのです。使い慣れたツールはほぼどれもCloudifyはおそらくサポートしています。分かりやすいところでChefやPuppet、bash（*nixシステム用）、PowerShell（Windows用）などの構成管理ツールがあります。
+ *A:* Cloudifyは出荷時に、そのまま私たちの<a href="http://getcloudify.org/cloud_orchestration_cloud_automation.html#HPLink">お気に入りのテクノロジー</a>と併用できるように作られています。素晴らしいツール群に取って代わろうというのではなく、ただ本当にうまく併用させたいのです。使い慣れたツールはほぼどれもCloudifyはおそらくサポートしています。分かりやすいところでChefやPuppet、bash（*nixシステム用）、PowerShell（Windows用）などの構成管理ツールがあります。
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
 h2(#q11). *Q: Cloudifyのブループリントはどのように始めるのでしょうか。どこにありますか。*
 
- *A:* 利用可能なブループリントはすべて"Github":https://github.com/cloudify-cosmoにあります。Cloudifyウィジェットやインタラクティブシェル（近日予定）を試し、事前にブループリントの動作を確認することができます。Cloudifyのブループリントの始め方についての"動画のチュートリアル":/cloudifysourcetv.html :もご確認いただけます。
-すぐに始めるなら、"クイックスタートガイド":http://docs.getcloudify.org/3.3.1/blueprints/overview/に従ってください。
+ *A:* 利用可能なブループリントはすべて<a href="https://github.com/cloudify-cosmo">Github</a>にあります。Cloudifyウィジェットやインタラクティブシェル（近日予定）を試し、事前にブループリントの動作を確認することができます。Cloudifyのブループリントの始め方についての<a href="/cloudifysourcetv.html">動画のチュートリアル</a>もご確認いただけます。
+すぐに始めるなら、<a href="http://docs.getcloudify.org/3.3.1/blueprints/overview/">クイックスタートガイド</a>に従ってください。
 
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q16). *Q: Cloudifyでオリジナルのブループリントを書けますか。どのくらいの難易度でしょうか。*
 
  *A:*もちろんできます。初心者から達人レベルの間で言うなら、中級者レベルのあたりです。
-ご入用なブループリントが"当社のレポジトリ":https://github.com/cloudify-cosmoにない場合は、既存のブループリントから構文をコピーして自分で作成できます。ブループリントはYAMLで書かれていますので難しくはありません。始める方法については、"これらのリソース":http://docs.getcloudify.org/3.3.1/blueprints/overview/を確認してください。カスタムブループリントの支援を受けることができる"専門的なサポート":#q17を購入することもできます*。
+ご入用なブループリントが<a href="https://github.com/cloudify-cosmo">当社のレポジトリ</a>にない場合は、既存のブループリントから構文をコピーして自分で作成できます。ブループリントはYAMLで書かれていますので難しくはありません。始める方法については、<a href="http://docs.getcloudify.org/3.3.1/blueprints/overview/">これらのリソース</a>を確認してください。カスタムブループリントの支援を受けることができる<a href="#q17">専門的なサポート</a>を購入することもできます*。
 
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
 
 h2(#q12). *Q: Cloudifyは単一のデスクトップでも使えますか。*
 
- *A:* はい。CloudifyはVagrantベースの"インストール":http://getcloudify.org/downloads/get_cloudify.htmlをサポートしています。つまり、テスト目的又は他の理由であったとしても、Cloudifyをローカル環境でブートストラップして始めることができます。方法は"こちら.":http://docs.getcloudify.org/3.3.1/intro/getting-started/をご覧ください。
+ *A:* はい。CloudifyはVagrantベースの<a href="http://getcloudify.org/downloads/get_cloudify.html">インストール</a>をサポートしています。つまり、テスト目的又は他の理由であったとしても、Cloudifyをローカル環境でブートストラップして始めることができます。方法は<a href="http://docs.getcloudify.org/3.3.1/intro/getting-started/">こちら</a>をご覧ください。
 
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q13). *Q: 自動スケーリングの仕組みを教えてください。*
@@ -199,52 +198,52 @@ h2(#q13). *Q: 自動スケーリングの仕組みを教えてください。*
 
  
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 h2(#q14). *Q: OpenStackネイティブとはどういう意味ですか。*
 
-Cloudifyは次の2つの主要な指針により、出荷時点でそのまま"OpenStack":http://getcloudify.org/openstack-architecture-cloudify.htmlとネイティブに統合できるように設計されています: 
+Cloudifyは次の2つの主要な指針により、出荷時点でそのまま<a href="http://getcloudify.org/openstack-architecture-cloudify.html">OpenStack</a>とネイティブに統合できるように設計されています: 
 
-* OpenStackコアとインフラストラクチャーサービスとの統合。それにはこの完全な"OpenStackコンポーネントリスト":http://getcloudify.org/2014/07/18/openstack-wiki-open-cloud.htmlの項目と、継続的に開発され、リリースごとに追加される項目も通常は含まれます。
+* OpenStackコアとインフラストラクチャーサービスとの統合。それにはこの完全な<a href="http://getcloudify.org/2014/07/18/openstack-wiki-open-cloud.html">OpenStackコンポーネントリスト</a>の項目と、継続的に開発され、リリースごとに追加される項目も通常は含まれます。
 * OpenStackの設計指針の踏襲。OpenStackはPythonで記述され、メッセージングやデータベースなどに特定のスタックを使用します。OpenStackネイティブにするためには、OpenStackの設計指針と可能な限り擦り合わせなければなりません。
 
-Cloudify 3.xで私たちはそれらの指針にできる限り沿うために"TOSCA":http://getcloudify.org/openstack-architecture-cloudify.html#TOSCA標準を取り入れ、OpenStackの全コンポーネントをサポートするビルトインプラグインも開発しました。
+Cloudify 3.xで私たちはそれらの指針にできる限り沿うために<a href="http://getcloudify.org/openstack-architecture-cloudify.html#TOS">TOSCA</a>標準を取り入れ、OpenStackの全コンポーネントをサポートするビルトインプラグインも開発しました。
 
-"OpenStackネイティブ":http://getcloudify.org/2014/09/02/Open-Cloud-OpenStack-Cloud.htmlとすることについて詳しくはこちらをご覧ください。
+<a href="http://getcloudify.org/2014/09/02/Open-Cloud-OpenStack-Cloud.html">OpenStackネイティブ</a>とすることについて詳しくはこちらをご覧ください。
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
 h2(#q15). *Q: 企業向けのCloudifyとオープンソースエディションの比較になりますが、どう違うのでしょう。*
 
- *A:* Cloudifyには、"ここ":https://github.com/cloudify-cosmoから展開して、ニーズに合わせてカスタマイズできる永久無料のオープンソースバージョンと、オープンソースエディションの全機能を内包し、その他の利点も併せ持つPremiumエディションがあります。2つのバージョンについては"こちら":http://getcloudify.org/goPro.htmlをご覧ください。詳細が必要な場合には、"お気軽にご連絡":mailto:hello@getcloudify.org?subject=I'd%20like%20to%20hear%20more%20about%20Cloudify%20Premiumください。
+ *A:* Cloudifyには、<a href="https://github.com/cloudify-cosmo">ここ</a>から展開して、ニーズに合わせてカスタマイズできる永久無料のオープンソースバージョンと、オープンソースエディションの全機能を内包し、その他の利点も併せ持つプレミアムエディションがあります。2つのバージョンについては<a href="http://getcloudify.org/goPro.html">こちら</a>をご覧ください。詳細が必要な場合には、<a href="mailto:hello@getcloudify.org?subject=I'd%20like%20to%20hear%20more%20about%20Cloudify%20Premium">お気軽にご連絡</a>ください。
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
 h2(#q17). *Q: サポートはどうなりますか。*
 
- *A:* サポートパッケージはCloudifyへのアドオンとして購入できます。また、Cloudify Premiumエディションを選ばれた場合には、サポートはパッケージに含まれています。Cloudify Premiumについて詳しくは、"こちら":http://getcloudify.org/goPro.htmlをご覧ください。 
+ *A:* サポートパッケージはCloudifyへのアドオンとして購入できます。また、Cloudifyプレミアムエディションを選ばれた場合には、サポートはパッケージに含まれています。Cloudify Premiumについて詳しくは、<a href="http://getcloudify.org/goPro.html">こちら</a>をご覧ください。 
 
  <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 
 h2(#q18). *Q: 他に知っておくべき事柄はありますか。*
 
- *A:* ありふれた言い方になりますが、私たちはCloudifyユーザーとコミュニティメンバーの一人一人を大切にしています。何かのアイディアや"リクエスト":https://cloudifysource.atlassian.net/browse/CFYしたい機能がある場合には、私たちの"ロードマップ":http://getcloudify.org/cloudify-roadmap.htmlを確認して今後のバージョンに含まれる項目を確認することができます。私たちはイノベーションを続けたいのでぜひとも連絡してアイディアを教えてください。素晴らしいコミュニティの後押しがなければオープンソースソールはあり得ないことを私たちは分かっています。ですので、このサイトが"ドキュメント":/guide,や"ブログ":/blog、"動画のチュートリアル"/cloudifysourcetvなどで必要とされるすべてのリソースを提供できていることを願っています。当社の"デベロッパー":https://groups.google.com/forum/#!forum/cloudify-developersと"ユーザー":https://groups.google.com/forum/#!forum/cloudify-usersのフォーラムでもサポートは受けられます。必ず加入して、ためらわずにリーチアウトしてください。
+ *A:* ありふれた言い方になりますが、私たちはCloudifyユーザーとコミュニティメンバーの一人一人を大切にしています。何かのアイディアや<a href="https://cloudifysource.atlassian.net/browse/CFY">リクエスト</a>したい機能がある場合には、私たちの<a href="http://getcloudify.org/cloudify-roadmap.html">ロードマップ</a>を確認して今後のバージョンに含まれる項目を確認することができます。私たちはイノベーションを続けたいのでぜひとも連絡してアイディアを教えてください。素晴らしいコミュニティの後押しがなければオープンソースソールはあり得ないことを私たちは分かっています。ですので、このサイトが<a href="/guide">ドキュメント</a>,や<a href="/blog">ブログ</a>、<a href="/cloudifysourcetv">動画のチュートリアル</a>などで必要とされるすべてのリソースを提供できていることを願っています。当社の<a href="https://groups.google.com/forum/#!forum/cloudify-developers">デベロッパー</a>と<a href="https://groups.google.com/forum/#!forum/cloudify-users">ユーザー</a>のフォーラムでもサポートは受けられます。必ず加入して、ためらわずにリーチアウトしてください。
 
 
 
 <br/>
-"Back to top":#top
+"先頭に戻る":#top
 <hr/>
 
 

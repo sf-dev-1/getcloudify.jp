@@ -477,7 +477,7 @@ float: right;
 
 @media (min-width: 768px) and (max-width: 979px) {
     .dwnBtn{display:none !important; }
-	.row {
+  .row {
     margin-left: -20px;
     *zoom: 1;
   }
