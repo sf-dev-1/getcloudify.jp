@@ -1,6 +1,6 @@
 ---
 layout: bt_default
-title:  Pure-Play Cloud Orchestration & Automation Based on TOSCA
+title:  オープンソースのクラウド・オーケストレーションを実現
 category: home 
 ---
 
